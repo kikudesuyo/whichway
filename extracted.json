@@ -1,0 +1,2840 @@
+{
+  "props": {
+    "pageProps": {
+      "serverTimer": 1777295911508,
+      "rawUserAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1",
+      "isLogin": false,
+      "isPC": false,
+      "isTablet": false,
+      "isYJApp": false,
+      "isLessThanIE8": false,
+      "osType": "iOS",
+      "browserType": "other",
+      "browserName": "Mobile Safari",
+      "browserMajorVersion": 18,
+      "cookie": "",
+      "identifier": "",
+      "loginUrl": "https://login.yahoo.co.jp/config/login?.src=transit\u0026.done=https%3A%2F%2Ftransit.yahoo.co.jp%2Fsearch%2Fresult%3Fal%3D1%26d%3D27%26ex%3D1%26expkind%3D1%26from%3D%E6%9D%B1%E9%8A%80%E5%BA%A7%26hb%3D1%26hh%3D21%26lb%3D1%26m%3D04%26m1%3D4%26m2%3D5%26s%3D0%26shin%3D1%26sr%3D1%26ticket%3Dic%26to%3D%E4%B8%89%E3%83%84%E5%A2%83%26type%3D1%26userpass%3D1%26ws%3D3%26y%3D2026",
+      "webToAppKadowakiResult": null,
+      "sideLinkKadowakiResult": null,
+      "miffyItem": null,
+      "exDone": "",
+      "stEditRegisterCrumb": "",
+      "hasCommuteData": false,
+      "registeredStations": [],
+      "queryState": {
+        "from": "東銀座",
+        "to": "三ツ境",
+        "viaList": [],
+        "viaStationCodeList": [],
+        "year": "2026",
+        "month": "04",
+        "day": "27",
+        "hour": "21",
+        "minute": "45",
+        "dateType": "1",
+        "ticket": "ic",
+        "expKind": "1",
+        "useUserPass": true,
+        "walkSpeed": "3",
+        "sort": "0",
+        "useAirline": true,
+        "useShinkansen": true,
+        "useLimitedExpress": true,
+        "useHighwayBus": true,
+        "useLocalBus": true,
+        "useShip": true,
+        "detourList": []
+      },
+      "naviSearchParam": {
+        "resultInfo": {
+          "Status": 200,
+          "Copyright": "Copyright © 2026 LY Corporation. All Rights Reserved.",
+          "Description": "Copyright © 2026 LY Corporation. All Rights Reserved.",
+          "Start": 1,
+          "ForceAverageSearch": "False",
+          "Total": 6,
+          "WithTeiki": "False",
+          "Count": 6,
+          "QueryInfo": {
+            "Feature": [
+              {
+                "Station": {
+                  "Target": 5000
+                },
+                "Type": "from"
+              },
+              {
+                "Station": {
+                  "Target": 5001
+                },
+                "Type": "to"
+              }
+            ]
+          },
+          "NaviParams": "eyJjc3JjIjoiIiwiZnJvbSI6IuadsemKgOW6pyIsImZjb2RlIjoiIiwiZmd1aWRlcG9pbnQiOiIiLCJmcm9tZ2lkIjoiIiwidG8iOiLkuInjg4TlooMiLCJ0Y29kZSI6IiIsInRndWlkZXBvaW50IjoiIiwidG9naWQiOiIiLCJ2aWEiOiIiLCJ2aWFjb2RlIjoiIiwiZGF0ZSI6IjIwMjYwNDI3MjE0NSIsInR5cGUiOjEsInMiOjAsImRpc3QiOjIwMDAsIndzIjozLCJ0d3MiOjIsInB0biI6ImFsLHNlLGV4LGhiLGxiLHNyIiwicHJpYWwiOjAsInByaSI6MCwic3RhcnQiOjEsInJlc3VsdHMiOjYsIm1vZGUiOiJsaXN0IiwiZGV0YWlsIjoiZnVsbCIsInFwIjoxLCJwcyI6MCwiZXhwa2luZCI6MSwidGlja2V0IjoiaWMiLCJleHB0aWNrZXQiOiIiLCJ3ZWJ1cmwiOjEsInBhc3N0eXBlIjoiQnVzc2luZXNzIiwib2ZmcGVhayI6MCwid2VhdGhlciI6MCwic3BsaXQiOjEsInNlcmlhbGl6ZSI6MSwibHNpbmZvIjoxLCJpcmlkIjoiIiwiaXJzZWN0aW9uIjoiIiwiaXJkaXJlY29kZSI6IiIsImlybmFtZSI6IiIsInVzZXJwYXNzIjowLCJyb3V0ZXNlY3Rpb24iOjAsImRpdmllZCI6MCwiY29uZ2VzdGlvbiI6MCwiZGV2aWNlIjoyLCJydG1faXJyX2NuZyI6MCwiZW5naW5lIjoidHJhbnNpdCIsImxvZyI6MSwiYWNjZXNzaWJpbGl0eSI6MCwiZnJvbW9ucm9hZCI6MCwiZ3VpZGVsZXZlbCI6MTAwLCJ3YWxrIjoxLCJjdXN0b20iOiIiLCJibGsiOiIiLCJ3ZiI6MCwidmFyaWF0aW9uIjowLCJsZXNzVGhhblNpZ25UYWciOiIjRTcxMDQ3NDU7IiwianJlUHJvbW90aW9uIjoiTk9ORSJ9",
+          "EngineVer": "202605_02a",
+          "WebUrl": "https://transit.yahoo.co.jp/transit_app/redirectSearchDetail.php?from=%E6%9D%B1%E9%8A%80%E5%BA%A7\u0026flatlon=\u0026to=%E4%B8%89%E3%83%84%E5%A2%83\u0026tlatlon=\u0026ym=202604\u0026d=27\u0026hh=21\u0026m1=4\u0026m2=5\u0026datepicker=4%2F27%2F2026\u0026expkind=1\u0026type=1\u0026s=0\u0026ws=3\u0026tws=2\u0026ticket=ic\u0026fromgid=\u0026togid=\u0026userpass=0\u0026shin=1\u0026al=1\u0026ex=1\u0026hb=1\u0026lb=1\u0026sr=1",
+          "ShareUrl": "https://approach.yahoo.co.jp/r/ODEHNM?preview=auto\u0026src=https%3A%2F%2Ftransit.yahoo.co.jp%2Fsearch%2Fresult%3Ffrom%3D%25E6%259D%25B1%25E9%258A%2580%25E5%25BA%25A7%26flatlon%3D%252C%252C22930%26to%3D%25E4%25B8%2589%25E3%2583%2584%25E5%25A2%2583%26tlatlon%3D%252C%252C23329%26ym%3D202604%26d%3D27%26hh%3D21%26m1%3D4%26m2%3D5%26datepicker%3D4%252F27%252F2026%26expkind%3D1%26type%3D1%26s%3D0%26ws%3D3%26tws%3D2%26ticket%3Dic%26fromgid%3D%26togid%3D%26userpass%3D0%26shin%3D1%26al%3D1%26ex%3D1%26hb%3D1%26lb%3D1%26sr%3D1",
+          "Latency": 0.302
+        },
+        "featureInfoList": [
+          {
+            "summaryInfo": {
+              "departureTime": "21:57",
+              "arrivalTime": "22:56",
+              "totalTime": "59分",
+              "totalPrice": "947",
+              "totalPriceDetail": null,
+              "timeOnBoard": "40分",
+              "transferCount": "3",
+              "isFast": true,
+              "isEasy": false,
+              "isCheap": false,
+              "distance": "41.4km",
+              "airportCompanyNames": [],
+              "withTeiki": false,
+              "teiki": [
+                {
+                  "month": "1",
+                  "price": "31,910"
+                },
+                {
+                  "month": "3",
+                  "price": "90,960"
+                },
+                {
+                  "month": "6",
+                  "price": "167,730"
+                }
+              ],
+              "calendarUrl": "https://calendar.yahoo.co.jp/?V=60\u0026ST=20260427T2157\u0026DUR=0059\u0026TITLE=%E6%9D%B1%E9%8A%80%E5%BA%A7%E2%86%92%E4%B8%89%E3%83%84%E5%A2%83\u0026DESC=21%3A57%20%E6%9D%B1%E9%8A%80%E5%BA%A7%0A%E9%83%BD%E5%96%B6%E6%B5%85%E8%8D%89%E7%B7%9A%E5%BF%AB%E7%89%B9%E3%83%BB%E4%B8%89%E5%B4%8E%E5%8F%A3%E8%A1%8C%0A22%3A06%20%E6%96%B0%E6%A9%8B%0A%EF%BC%AA%EF%BC%B2%E6%9D%B1%E6%B5%B7%E9%81%93%E6%9C%AC%E7%B7%9A%E3%83%BB%E5%9B%BD%E5%BA%9C%E6%B4%A5%E8%A1%8C%0A22%3A37%20%E6%A8%AA%E6%B5%9C%0A%E7%9B%B8%E9%89%84%E6%9C%AC%E7%B7%9A%E7%89%B9%E6%80%A5%E3%83%BB%E6%B5%B7%E8%80%81%E5%90%8D%E8%A1%8C%0A22%3A51%20%E4%BA%8C%E4%BF%A3%E5%B7%9D%0A%E7%9B%B8%E9%89%84%E6%9C%AC%E7%B7%9A%E3%83%BB%E6%B5%B7%E8%80%81%E5%90%8D%E8%A1%8C%0A22%3A56%20%E4%B8%89%E3%83%84%E5%A2%83%0A",
+              "routeSectionXml": "",
+              "availUserPass": false,
+              "approachUrl": "https://approach.yahoo.co.jp/r/ODEHNM?preview=auto\u0026src=https%3A%2F%2Ftransit.yahoo.co.jp%2Fsearch%2Fresult%3Ffrom%3D%25E6%259D%25B1%25E9%258A%2580%25E5%25BA%25A7%26flatlon%3D%252C%252C22930%26to%3D%25E4%25B8%2589%25E3%2583%2584%25E5%25A2%2583%26tlatlon%3D%252C%252C23329%26ym%3D202604%26d%3D27%26hh%3D21%26m1%3D4%26m2%3D5%26datepicker%3D4%252F27%252F2026%26expkind%3D1%26type%3D1%26s%3D0%26ws%3D3%26tws%3D2%26ticket%3Dic%26fromgid%3D%26togid%3D%26userpass%3D0%26shin%3D1%26al%3D1%26ex%3D1%26hb%3D1%26lb%3D1%26sr%3D1%26mtf%3D1"
+            },
+            "detourInfo": null,
+            "edgeInfoList": [
+              {
+                "featureIndex": 1,
+                "edgeIndex": 0,
+                "indexType": 0,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "0_0",
+                  "price": "178",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "東銀座",
+                "stationCode": "22930",
+                "firstStation": false,
+                "railName": "都営浅草線快特・三崎口行",
+                "railNameExcludingDestination": "都営浅草線快特",
+                "destination": "三崎口行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "21:57",
+                    "type": 3
+                  }
+                ],
+                "pointIcon": 0,
+                "pointName": "東銀座",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "1",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "1",
+                    "番線"
+                  ],
+                  "position": [
+                    "[8両] 前 中 後"
+                  ]
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [],
+                "linkInfo": {
+                  "exit": "/station/22930/exit",
+                  "time": "/timetable/22930",
+                  "station": "/station/22930",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.76704442996476\u0026lat=35.66962752164808\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=東銀座"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "f2706d",
+                  "exit": null
+                },
+                "startStationCode": "22930"
+              },
+              {
+                "featureIndex": 1,
+                "edgeIndex": 1,
+                "indexType": 1,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "1_1",
+                  "price": "528",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "新橋",
+                "stationCode": "22751",
+                "firstStation": false,
+                "railName": "ＪＲ東海道本線・国府津行",
+                "railNameExcludingDestination": "ＪＲ東海道本線",
+                "destination": "国府津行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "21:58",
+                    "type": 2
+                  },
+                  {
+                    "time": "22:06",
+                    "type": 1
+                  }
+                ],
+                "pointIcon": 2,
+                "pointName": "新橋",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "1",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "6",
+                    "番線"
+                  ],
+                  "position": [
+                    "[15両] 前 中"
+                  ]
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "品川",
+                    "departureTime": "22:12"
+                  },
+                  {
+                    "name": "川崎",
+                    "departureTime": "22:21"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": "/station/22751/exit",
+                  "time": "/timetable/22751",
+                  "station": "/station/22751",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.7581564170988\u0026lat=35.66657206655595\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=新橋"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "ff5000",
+                  "exit": null
+                },
+                "startStationCode": "22751"
+              },
+              {
+                "featureIndex": 1,
+                "edgeIndex": 2,
+                "indexType": 1,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "2_3",
+                  "price": "241",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "横浜",
+                "stationCode": "23368",
+                "firstStation": true,
+                "railName": "相鉄本線特急・海老名行",
+                "railNameExcludingDestination": "相鉄本線特急",
+                "destination": "海老名行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "22:29",
+                    "type": 2
+                  },
+                  {
+                    "time": "22:37",
+                    "type": 1
+                  }
+                ],
+                "pointIcon": 2,
+                "pointName": "横浜",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "2",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "2",
+                    "番線"
+                  ],
+                  "position": [
+                    "[8両] 前 中 後",
+                    "[10両] 前 中 後"
+                  ]
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "西谷",
+                    "departureTime": "22:44"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": "/station/23368/exit",
+                  "time": "/timetable/23368",
+                  "station": "/station/23368",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.62123203098406\u0026lat=35.46548527325546\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=横浜"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "0064b9",
+                  "exit": null
+                },
+                "startStationCode": "23368"
+              },
+              {
+                "featureIndex": 1,
+                "edgeIndex": 3,
+                "indexType": 1,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "2_3",
+                  "price": "241",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "二俣川",
+                "stationCode": "23310",
+                "firstStation": false,
+                "railName": "相鉄本線・海老名行",
+                "railNameExcludingDestination": "相鉄本線",
+                "destination": "海老名行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "22:48",
+                    "type": 2
+                  },
+                  {
+                    "time": "22:51",
+                    "type": 1
+                  }
+                ],
+                "pointIcon": 2,
+                "pointName": "二俣川",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "1・2",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "1",
+                    "番線"
+                  ],
+                  "position": []
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "希望ケ丘",
+                    "departureTime": "22:54"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": null,
+                  "time": "/timetable/23310",
+                  "station": "/station/23310",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.53229565416495\u0026lat=35.46356802545274\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=二俣川"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "0064b9",
+                  "exit": null
+                },
+                "startStationCode": "23310"
+              },
+              {
+                "featureIndex": 1,
+                "edgeIndex": 4,
+                "indexType": 2,
+                "state": 0,
+                "priceInfo": {},
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "三ツ境",
+                "stationCode": "23329",
+                "firstStation": false,
+                "railName": "相鉄本線・海老名行",
+                "railNameExcludingDestination": "相鉄本線",
+                "destination": "海老名行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "22:56",
+                    "type": 3
+                  }
+                ],
+                "pointIcon": 1,
+                "pointName": "三ツ境",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "1・2",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "1",
+                    "番線"
+                  ],
+                  "position": []
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "希望ケ丘",
+                    "departureTime": "22:54"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": null,
+                  "time": "/timetable/23329",
+                  "station": "/station/23329",
+                  "loco": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.5025481867806\u0026lat=35.46781722164093\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=23329"
+                },
+                "promotionInfo": null,
+                "accessInfo": null,
+                "startStationCode": "23310"
+              }
+            ]
+          },
+          {
+            "summaryInfo": {
+              "departureTime": "21:49",
+              "arrivalTime": "22:56",
+              "totalTime": "1時間7分",
+              "totalPrice": "945",
+              "totalPriceDetail": null,
+              "timeOnBoard": "55分",
+              "transferCount": "2",
+              "isFast": true,
+              "isEasy": false,
+              "isCheap": false,
+              "distance": "41.2km",
+              "airportCompanyNames": [],
+              "withTeiki": false,
+              "teiki": [
+                {
+                  "month": "1",
+                  "price": "31,620"
+                },
+                {
+                  "month": "3",
+                  "price": "90,130"
+                },
+                {
+                  "month": "6",
+                  "price": "166,170"
+                }
+              ],
+              "calendarUrl": "https://calendar.yahoo.co.jp/?V=60\u0026ST=20260427T2149\u0026DUR=0107\u0026TITLE=%E6%9D%B1%E9%8A%80%E5%BA%A7%E2%86%92%E4%B8%89%E3%83%84%E5%A2%83\u0026DESC=21%3A49%20%E6%9D%B1%E9%8A%80%E5%BA%A7%0A%E9%83%BD%E5%96%B6%E6%B5%85%E8%8D%89%E7%B7%9A%E3%83%BB%E8%A5%BF%E9%A6%AC%E8%BE%BC%E8%A1%8C%0A21%3A59%20%E6%96%B0%E6%A9%8B%0A%EF%BC%AA%EF%BC%B2%E6%A8%AA%E9%A0%88%E8%B3%80%E7%B7%9A%E3%83%BB%E4%B9%85%E9%87%8C%E6%B5%9C%E8%A1%8C%0A22%3A18%20%E6%AD%A6%E8%94%B5%E5%B0%8F%E6%9D%89%0A%EF%BC%AA%EF%BC%B2%E7%9B%B8%E9%89%84%E7%9B%B4%E9%80%9A%E7%B7%9A%E3%83%BB%E6%B5%B7%E8%80%81%E5%90%8D%E8%A1%8C%0A22%3A37%20%E7%BE%BD%E6%B2%A2%E6%A8%AA%E6%B5%9C%E5%9B%BD%E5%A4%A7%0A%E7%9B%B8%E9%89%84%E6%96%B0%E6%A8%AA%E6%B5%9C%E7%B7%9A%E3%83%BB%E6%B5%B7%E8%80%81%E5%90%8D%E8%A1%8C%0A22%3A56%20%E4%B8%89%E3%83%84%E5%A2%83%0A",
+              "routeSectionXml": "",
+              "availUserPass": false,
+              "approachUrl": "https://approach.yahoo.co.jp/r/ODEHNM?preview=auto\u0026src=https%3A%2F%2Ftransit.yahoo.co.jp%2Fsearch%2Fresult%3Ffrom%3D%25E6%259D%25B1%25E9%258A%2580%25E5%25BA%25A7%26flatlon%3D%252C%252C22930%26to%3D%25E4%25B8%2589%25E3%2583%2584%25E5%25A2%2583%26tlatlon%3D%252C%252C23329%26ym%3D202604%26d%3D27%26hh%3D21%26m1%3D4%26m2%3D5%26datepicker%3D4%252F27%252F2026%26expkind%3D1%26type%3D1%26s%3D0%26ws%3D3%26tws%3D2%26ticket%3Dic%26fromgid%3D%26togid%3D%26userpass%3D0%26shin%3D1%26al%3D1%26ex%3D1%26hb%3D1%26lb%3D1%26sr%3D1%26mtf%3D2"
+            },
+            "detourInfo": null,
+            "edgeInfoList": [
+              {
+                "featureIndex": 2,
+                "edgeIndex": 0,
+                "indexType": 0,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "0_0",
+                  "price": "178",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "東銀座",
+                "stationCode": "22930",
+                "firstStation": false,
+                "railName": "都営浅草線・西馬込行",
+                "railNameExcludingDestination": "都営浅草線",
+                "destination": "西馬込行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "21:49",
+                    "type": 3
+                  }
+                ],
+                "pointIcon": 0,
+                "pointName": "東銀座",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "1",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "1",
+                    "番線"
+                  ],
+                  "position": [
+                    "[8両] 前 中 後"
+                  ]
+                },
+                "preCautionalComment": "京成船橋方面から直通運転",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [],
+                "linkInfo": {
+                  "exit": "/station/22930/exit",
+                  "time": "/timetable/22930",
+                  "station": "/station/22930",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.76704442996476\u0026lat=35.66962752164808\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=東銀座"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "f2706d",
+                  "exit": null
+                },
+                "startStationCode": "22930"
+              },
+              {
+                "featureIndex": 2,
+                "edgeIndex": 1,
+                "indexType": 1,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "1_3",
+                  "price": "767",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "新橋",
+                "stationCode": "22751",
+                "firstStation": false,
+                "railName": "ＪＲ横須賀線・久里浜行",
+                "railNameExcludingDestination": "ＪＲ横須賀線",
+                "destination": "久里浜行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "21:51",
+                    "type": 2
+                  },
+                  {
+                    "time": "21:59",
+                    "type": 1
+                  }
+                ],
+                "pointIcon": 2,
+                "pointName": "新橋",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "地下1",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "3",
+                    "番線"
+                  ],
+                  "position": []
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "品川",
+                    "departureTime": "22:04"
+                  },
+                  {
+                    "name": "西大井",
+                    "departureTime": "22:09"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": "/station/22751/exit",
+                  "time": "/timetable/22751",
+                  "station": "/station/22751",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.7581564170988\u0026lat=35.66657206655595\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=新橋"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "1321c4",
+                  "exit": null
+                },
+                "startStationCode": "22751"
+              },
+              {
+                "featureIndex": 2,
+                "edgeIndex": 2,
+                "indexType": 1,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "1_3",
+                  "price": "767",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "武蔵小杉",
+                "stationCode": "23345",
+                "firstStation": false,
+                "railName": "ＪＲ相鉄直通線・海老名行",
+                "railNameExcludingDestination": "ＪＲ相鉄直通線",
+                "destination": "海老名行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "22:14",
+                    "type": 2
+                  },
+                  {
+                    "time": "22:18",
+                    "type": 1
+                  }
+                ],
+                "pointIcon": 2,
+                "pointName": "武蔵小杉",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "3",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "1",
+                    "番線"
+                  ],
+                  "position": []
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [],
+                "linkInfo": {
+                  "exit": "/station/23345/exit",
+                  "time": "/timetable/23345",
+                  "station": "/station/23345",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.66122519253483\u0026lat=35.57533220735877\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=武蔵小杉"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "00b28b",
+                  "exit": null
+                },
+                "startStationCode": "23345"
+              },
+              {
+                "featureIndex": 2,
+                "edgeIndex": 3,
+                "indexType": 1,
+                "state": 2,
+                "priceInfo": {
+                  "edgeGroup": "1_3",
+                  "price": "767",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "羽沢横浜国大",
+                "stationCode": "29682",
+                "firstStation": false,
+                "railName": "相鉄新横浜線・海老名行",
+                "railNameExcludingDestination": "相鉄新横浜線",
+                "destination": "海老名行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "22:37",
+                    "type": 3
+                  }
+                ],
+                "pointIcon": 4,
+                "pointName": "羽沢横浜国大【乗換不要】",
+                "ridingPositionInfo": null,
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "西谷",
+                    "departureTime": "22:41"
+                  },
+                  {
+                    "name": "鶴ケ峰",
+                    "departureTime": "22:44"
+                  },
+                  {
+                    "name": "二俣川",
+                    "departureTime": "22:51"
+                  },
+                  {
+                    "name": "希望ケ丘",
+                    "departureTime": "22:54"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": "/station/29682/exit",
+                  "time": "/timetable/29682",
+                  "station": "/station/29682",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.58606881408676\u0026lat=35.48117793814779\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=羽沢横浜国大"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "0064b9",
+                  "exit": null
+                },
+                "startStationCode": "29682"
+              },
+              {
+                "featureIndex": 2,
+                "edgeIndex": 4,
+                "indexType": 2,
+                "state": 0,
+                "priceInfo": {},
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "三ツ境",
+                "stationCode": "23329",
+                "firstStation": false,
+                "railName": "相鉄新横浜線・海老名行",
+                "railNameExcludingDestination": "相鉄新横浜線",
+                "destination": "海老名行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "22:56",
+                    "type": 3
+                  }
+                ],
+                "pointIcon": 1,
+                "pointName": "三ツ境",
+                "ridingPositionInfo": null,
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "西谷",
+                    "departureTime": "22:41"
+                  },
+                  {
+                    "name": "鶴ケ峰",
+                    "departureTime": "22:44"
+                  },
+                  {
+                    "name": "二俣川",
+                    "departureTime": "22:51"
+                  },
+                  {
+                    "name": "希望ケ丘",
+                    "departureTime": "22:54"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": null,
+                  "time": "/timetable/23329",
+                  "station": "/station/23329",
+                  "loco": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.5025481867806\u0026lat=35.46781722164093\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=23329"
+                },
+                "promotionInfo": null,
+                "accessInfo": null,
+                "startStationCode": "29682"
+              }
+            ]
+          },
+          {
+            "summaryInfo": {
+              "departureTime": "22:02",
+              "arrivalTime": "23:12",
+              "totalTime": "1時間10分",
+              "totalPrice": "947",
+              "totalPriceDetail": null,
+              "timeOnBoard": "47分",
+              "transferCount": "2",
+              "isFast": false,
+              "isEasy": false,
+              "isCheap": false,
+              "distance": "41.4km",
+              "airportCompanyNames": [],
+              "withTeiki": false,
+              "teiki": [
+                {
+                  "month": "1",
+                  "price": "31,910"
+                },
+                {
+                  "month": "3",
+                  "price": "90,960"
+                },
+                {
+                  "month": "6",
+                  "price": "167,730"
+                }
+              ],
+              "calendarUrl": "https://calendar.yahoo.co.jp/?V=60\u0026ST=20260427T2202\u0026DUR=0110\u0026TITLE=%E6%9D%B1%E9%8A%80%E5%BA%A7%E2%86%92%E4%B8%89%E3%83%84%E5%A2%83\u0026DESC=22%3A02%20%E6%9D%B1%E9%8A%80%E5%BA%A7%0A%E9%83%BD%E5%96%B6%E6%B5%85%E8%8D%89%E7%B7%9A%E3%83%BB%E8%A5%BF%E9%A6%AC%E8%BE%BC%E8%A1%8C%0A22%3A15%20%E6%96%B0%E6%A9%8B%0A%EF%BC%AA%EF%BC%B2%E6%9D%B1%E6%B5%B7%E9%81%93%E6%9C%AC%E7%B7%9A%E3%83%BB%E5%B9%B3%E5%A1%9A%E8%A1%8C%0A22%3A52%20%E6%A8%AA%E6%B5%9C%0A%E7%9B%B8%E9%89%84%E6%9C%AC%E7%B7%9A%E5%BF%AB%E9%80%9F%E3%83%BB%E6%B5%B7%E8%80%81%E5%90%8D%E8%A1%8C%0A23%3A12%20%E4%B8%89%E3%83%84%E5%A2%83%0A",
+              "routeSectionXml": "",
+              "availUserPass": false,
+              "approachUrl": "https://approach.yahoo.co.jp/r/ODEHNM?preview=auto\u0026src=https%3A%2F%2Ftransit.yahoo.co.jp%2Fsearch%2Fresult%3Ffrom%3D%25E6%259D%25B1%25E9%258A%2580%25E5%25BA%25A7%26flatlon%3D%252C%252C22930%26to%3D%25E4%25B8%2589%25E3%2583%2584%25E5%25A2%2583%26tlatlon%3D%252C%252C23329%26ym%3D202604%26d%3D27%26hh%3D21%26m1%3D4%26m2%3D5%26datepicker%3D4%252F27%252F2026%26expkind%3D1%26type%3D1%26s%3D0%26ws%3D3%26tws%3D2%26ticket%3Dic%26fromgid%3D%26togid%3D%26userpass%3D0%26shin%3D1%26al%3D1%26ex%3D1%26hb%3D1%26lb%3D1%26sr%3D1%26mtf%3D3"
+            },
+            "detourInfo": null,
+            "edgeInfoList": [
+              {
+                "featureIndex": 3,
+                "edgeIndex": 0,
+                "indexType": 0,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "0_0",
+                  "price": "178",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "東銀座",
+                "stationCode": "22930",
+                "firstStation": false,
+                "railName": "都営浅草線・西馬込行",
+                "railNameExcludingDestination": "都営浅草線",
+                "destination": "西馬込行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "22:02",
+                    "type": 3
+                  }
+                ],
+                "pointIcon": 0,
+                "pointName": "東銀座",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "1",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "1",
+                    "番線"
+                  ],
+                  "position": [
+                    "[8両] 前 中 後"
+                  ]
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [],
+                "linkInfo": {
+                  "exit": "/station/22930/exit",
+                  "time": "/timetable/22930",
+                  "station": "/station/22930",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.76704442996476\u0026lat=35.66962752164808\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=東銀座"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "f2706d",
+                  "exit": null
+                },
+                "startStationCode": "22930"
+              },
+              {
+                "featureIndex": 3,
+                "edgeIndex": 1,
+                "indexType": 1,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "1_1",
+                  "price": "528",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "新橋",
+                "stationCode": "22751",
+                "firstStation": false,
+                "railName": "ＪＲ東海道本線・平塚行",
+                "railNameExcludingDestination": "ＪＲ東海道本線",
+                "destination": "平塚行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "22:04",
+                    "type": 2
+                  },
+                  {
+                    "time": "22:15",
+                    "type": 1
+                  }
+                ],
+                "pointIcon": 2,
+                "pointName": "新橋",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "1",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "6",
+                    "番線"
+                  ],
+                  "position": [
+                    "[15両] 前 中"
+                  ]
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "品川",
+                    "departureTime": "22:22"
+                  },
+                  {
+                    "name": "川崎",
+                    "departureTime": "22:32"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": "/station/22751/exit",
+                  "time": "/timetable/22751",
+                  "station": "/station/22751",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.7581564170988\u0026lat=35.66657206655595\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=新橋"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "ff5000",
+                  "exit": null
+                },
+                "startStationCode": "22751"
+              },
+              {
+                "featureIndex": 3,
+                "edgeIndex": 2,
+                "indexType": 1,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "2_2",
+                  "price": "241",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "横浜",
+                "stationCode": "23368",
+                "firstStation": true,
+                "railName": "相鉄本線快速・海老名行",
+                "railNameExcludingDestination": "相鉄本線快速",
+                "destination": "海老名行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "22:40",
+                    "type": 2
+                  },
+                  {
+                    "time": "22:52",
+                    "type": 1
+                  }
+                ],
+                "pointIcon": 2,
+                "pointName": "横浜",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "3",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "1",
+                    "番線"
+                  ],
+                  "position": []
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "星川",
+                    "departureTime": "22:56"
+                  },
+                  {
+                    "name": "西谷",
+                    "departureTime": "23:01"
+                  },
+                  {
+                    "name": "鶴ケ峰",
+                    "departureTime": "23:04"
+                  },
+                  {
+                    "name": "二俣川",
+                    "departureTime": "23:07"
+                  },
+                  {
+                    "name": "希望ケ丘",
+                    "departureTime": "23:10"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": "/station/23368/exit",
+                  "time": "/timetable/23368",
+                  "station": "/station/23368",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.62123203098406\u0026lat=35.46548527325546\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=横浜"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "0064b9",
+                  "exit": null
+                },
+                "startStationCode": "23368"
+              },
+              {
+                "featureIndex": 3,
+                "edgeIndex": 3,
+                "indexType": 2,
+                "state": 0,
+                "priceInfo": {},
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "三ツ境",
+                "stationCode": "23329",
+                "firstStation": true,
+                "railName": "相鉄本線快速・海老名行",
+                "railNameExcludingDestination": "相鉄本線快速",
+                "destination": "海老名行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "23:12",
+                    "type": 3
+                  }
+                ],
+                "pointIcon": 1,
+                "pointName": "三ツ境",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "3",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "1",
+                    "番線"
+                  ],
+                  "position": []
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "星川",
+                    "departureTime": "22:56"
+                  },
+                  {
+                    "name": "西谷",
+                    "departureTime": "23:01"
+                  },
+                  {
+                    "name": "鶴ケ峰",
+                    "departureTime": "23:04"
+                  },
+                  {
+                    "name": "二俣川",
+                    "departureTime": "23:07"
+                  },
+                  {
+                    "name": "希望ケ丘",
+                    "departureTime": "23:10"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": null,
+                  "time": "/timetable/23329",
+                  "station": "/station/23329",
+                  "loco": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.5025481867806\u0026lat=35.46781722164093\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=23329"
+                },
+                "promotionInfo": null,
+                "accessInfo": null,
+                "startStationCode": "23368"
+              }
+            ]
+          },
+          {
+            "summaryInfo": {
+              "departureTime": "22:00",
+              "arrivalTime": "23:12",
+              "totalTime": "1時間12分",
+              "totalPrice": "878",
+              "totalPriceDetail": null,
+              "timeOnBoard": "1時間4分",
+              "transferCount": "3",
+              "isFast": false,
+              "isEasy": false,
+              "isCheap": false,
+              "distance": "39.2km",
+              "airportCompanyNames": [],
+              "withTeiki": false,
+              "teiki": [
+                {
+                  "month": "1",
+                  "price": "33,600"
+                },
+                {
+                  "month": "3",
+                  "price": "95,780"
+                },
+                {
+                  "month": "6",
+                  "price": "181,450"
+                }
+              ],
+              "calendarUrl": "https://calendar.yahoo.co.jp/?V=60\u0026ST=20260427T2200\u0026DUR=0112\u0026TITLE=%E6%9D%B1%E9%8A%80%E5%BA%A7%E2%86%92%E4%B8%89%E3%83%84%E5%A2%83\u0026DESC=22%3A00%20%E6%9D%B1%E9%8A%80%E5%BA%A7%0A%E6%9D%B1%E4%BA%AC%E3%83%A1%E3%83%88%E3%83%AD%E6%97%A5%E6%AF%94%E8%B0%B7%E7%B7%9A%E3%83%BB%E4%B8%AD%E7%9B%AE%E9%BB%92%E8%A1%8C%0A22%3A25%20%E4%B8%AD%E7%9B%AE%E9%BB%92%0A%E6%9D%B1%E6%80%A5%E6%9D%B1%E6%A8%AA%E7%B7%9A%E6%80%A5%E8%A1%8C%E3%83%BB%E5%85%83%E7%94%BA%E3%83%BB%E4%B8%AD%E8%8F%AF%E8%A1%97%E8%A1%8C%0A22%3A41%20%E6%97%A5%E5%90%89(%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C)%0A%E6%9D%B1%E6%80%A5%E6%96%B0%E6%A8%AA%E6%B5%9C%E7%B7%9A%E6%80%A5%E8%A1%8C%E3%83%BB%E6%B5%B7%E8%80%81%E5%90%8D%E8%A1%8C%0A22%3A50%20%E6%96%B0%E6%A8%AA%E6%B5%9C%0A%E7%9B%B8%E9%89%84%E6%96%B0%E6%A8%AA%E6%B5%9C%E7%B7%9A%E7%89%B9%E6%80%A5%E3%83%BB%E6%B5%B7%E8%80%81%E5%90%8D%E8%A1%8C%0A23%3A07%20%E4%BA%8C%E4%BF%A3%E5%B7%9D%0A%E7%9B%B8%E9%89%84%E6%9C%AC%E7%B7%9A%E5%BF%AB%E9%80%9F%E3%83%BB%E6%B5%B7%E8%80%81%E5%90%8D%E8%A1%8C%0A23%3A12%20%E4%B8%89%E3%83%84%E5%A2%83%0A",
+              "routeSectionXml": "",
+              "availUserPass": false,
+              "approachUrl": "https://approach.yahoo.co.jp/r/ODEHNM?preview=auto\u0026src=https%3A%2F%2Ftransit.yahoo.co.jp%2Fsearch%2Fresult%3Ffrom%3D%25E6%259D%25B1%25E9%258A%2580%25E5%25BA%25A7%26flatlon%3D%252C%252C22930%26to%3D%25E4%25B8%2589%25E3%2583%2584%25E5%25A2%2583%26tlatlon%3D%252C%252C23329%26ym%3D202604%26d%3D27%26hh%3D21%26m1%3D4%26m2%3D5%26datepicker%3D4%252F27%252F2026%26expkind%3D1%26type%3D1%26s%3D0%26ws%3D3%26tws%3D2%26ticket%3Dic%26fromgid%3D%26togid%3D%26userpass%3D0%26shin%3D1%26al%3D1%26ex%3D1%26hb%3D1%26lb%3D1%26sr%3D1%26mtf%3D4"
+            },
+            "detourInfo": null,
+            "edgeInfoList": [
+              {
+                "featureIndex": 4,
+                "edgeIndex": 0,
+                "indexType": 0,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "0_4",
+                  "price": "878",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "東銀座",
+                "stationCode": "22930",
+                "firstStation": false,
+                "railName": "東京メトロ日比谷線・中目黒行",
+                "railNameExcludingDestination": "東京メトロ日比谷線",
+                "destination": "中目黒行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "22:00",
+                    "type": 3
+                  }
+                ],
+                "pointIcon": 0,
+                "pointName": "東銀座",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "3",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "2",
+                    "番線"
+                  ],
+                  "position": [
+                    "[7両] 前 中 後"
+                  ]
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "銀座",
+                    "departureTime": "22:02"
+                  },
+                  {
+                    "name": "日比谷",
+                    "departureTime": "22:03"
+                  },
+                  {
+                    "name": "霞ケ関(東京都)",
+                    "departureTime": "22:06"
+                  },
+                  {
+                    "name": "虎ノ門ヒルズ",
+                    "departureTime": "22:08"
+                  },
+                  {
+                    "name": "神谷町",
+                    "departureTime": "22:09"
+                  },
+                  {
+                    "name": "六本木",
+                    "departureTime": "22:13"
+                  },
+                  {
+                    "name": "広尾",
+                    "departureTime": "22:16"
+                  },
+                  {
+                    "name": "恵比寿",
+                    "departureTime": "22:19"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": "/station/22930/exit",
+                  "time": "/timetable/22930",
+                  "station": "/station/22930",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.76704442996476\u0026lat=35.66962752164808\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=東銀座"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "a59c95",
+                  "exit": null
+                },
+                "startStationCode": "22930"
+              },
+              {
+                "featureIndex": 4,
+                "edgeIndex": 1,
+                "indexType": 1,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "0_4",
+                  "price": "878",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "中目黒",
+                "stationCode": "22855",
+                "firstStation": false,
+                "railName": "東急東横線急行・元町・中華街行",
+                "railNameExcludingDestination": "東急東横線急行",
+                "destination": "元町・中華街行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "22:21",
+                    "type": 2
+                  },
+                  {
+                    "time": "22:25",
+                    "type": 1
+                  }
+                ],
+                "pointIcon": 2,
+                "pointName": "中目黒",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "1",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "1",
+                    "番線"
+                  ],
+                  "position": [
+                    "[10両] 前 中 後"
+                  ]
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "学芸大学",
+                    "departureTime": "22:28"
+                  },
+                  {
+                    "name": "自由が丘",
+                    "departureTime": "22:31"
+                  },
+                  {
+                    "name": "田園調布",
+                    "departureTime": "22:33"
+                  },
+                  {
+                    "name": "多摩川",
+                    "departureTime": "22:35"
+                  },
+                  {
+                    "name": "武蔵小杉",
+                    "departureTime": "22:38"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": "/station/22855/exit",
+                  "time": "/timetable/22855",
+                  "station": "/station/22855",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.6988569063859\u0026lat=35.64429545185436\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=中目黒"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "db0242",
+                  "exit": null
+                },
+                "startStationCode": "22855"
+              },
+              {
+                "featureIndex": 4,
+                "edgeIndex": 2,
+                "indexType": 1,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "0_4",
+                  "price": "878",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "日吉(神奈川県)",
+                "stationCode": "23297",
+                "firstStation": false,
+                "railName": "東急新横浜線急行・海老名行",
+                "railNameExcludingDestination": "東急新横浜線急行",
+                "destination": "海老名行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "22:40",
+                    "type": 2
+                  },
+                  {
+                    "time": "22:41",
+                    "type": 1
+                  }
+                ],
+                "pointIcon": 2,
+                "pointName": "日吉(神奈川県)",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "2",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "1",
+                    "番線"
+                  ],
+                  "position": []
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "新綱島",
+                    "departureTime": "22:44"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": "/station/23297/exit",
+                  "time": "/timetable/23297",
+                  "station": "/station/23297",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.64675555074925\u0026lat=35.553058121091595\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=日吉(神奈川県)"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "9614be",
+                  "exit": null
+                },
+                "startStationCode": "23297"
+              },
+              {
+                "featureIndex": 4,
+                "edgeIndex": 3,
+                "indexType": 1,
+                "state": 2,
+                "priceInfo": {
+                  "edgeGroup": "0_4",
+                  "price": "878",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "新横浜",
+                "stationCode": "23212",
+                "firstStation": false,
+                "railName": "相鉄新横浜線特急・海老名行",
+                "railNameExcludingDestination": "相鉄新横浜線特急",
+                "destination": "海老名行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "22:50",
+                    "type": 3
+                  }
+                ],
+                "pointIcon": 4,
+                "pointName": "新横浜【乗換不要】",
+                "ridingPositionInfo": null,
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "羽沢横浜国大",
+                    "departureTime": "22:54"
+                  },
+                  {
+                    "name": "西谷",
+                    "departureTime": "23:00"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": "/station/23212/exit",
+                  "time": "/timetable/23212",
+                  "station": "/station/23212",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.61762039574117\u0026lat=35.507424927870076\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=新横浜"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "0064b9",
+                  "exit": null
+                },
+                "startStationCode": "23212"
+              },
+              {
+                "featureIndex": 4,
+                "edgeIndex": 4,
+                "indexType": 1,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "0_4",
+                  "price": "878",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "二俣川",
+                "stationCode": "23310",
+                "firstStation": false,
+                "railName": "相鉄本線快速・海老名行",
+                "railNameExcludingDestination": "相鉄本線快速",
+                "destination": "海老名行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "23:04",
+                    "type": 2
+                  },
+                  {
+                    "time": "23:07",
+                    "type": 1
+                  }
+                ],
+                "pointIcon": 2,
+                "pointName": "二俣川",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "1",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "1",
+                    "番線"
+                  ],
+                  "position": []
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "希望ケ丘",
+                    "departureTime": "23:10"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": null,
+                  "time": "/timetable/23310",
+                  "station": "/station/23310",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.53229565416495\u0026lat=35.46356802545274\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=二俣川"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "0064b9",
+                  "exit": null
+                },
+                "startStationCode": "23310"
+              },
+              {
+                "featureIndex": 4,
+                "edgeIndex": 5,
+                "indexType": 2,
+                "state": 0,
+                "priceInfo": {},
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "三ツ境",
+                "stationCode": "23329",
+                "firstStation": false,
+                "railName": "相鉄本線快速・海老名行",
+                "railNameExcludingDestination": "相鉄本線快速",
+                "destination": "海老名行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "23:12",
+                    "type": 3
+                  }
+                ],
+                "pointIcon": 1,
+                "pointName": "三ツ境",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "1",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "1",
+                    "番線"
+                  ],
+                  "position": []
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "希望ケ丘",
+                    "departureTime": "23:10"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": null,
+                  "time": "/timetable/23329",
+                  "station": "/station/23329",
+                  "loco": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.5025481867806\u0026lat=35.46781722164093\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=23329"
+                },
+                "promotionInfo": null,
+                "accessInfo": null,
+                "startStationCode": "23310"
+              }
+            ]
+          },
+          {
+            "summaryInfo": {
+              "departureTime": "21:57",
+              "arrivalTime": "23:12",
+              "totalTime": "1時間15分",
+              "totalPrice": "808",
+              "totalPriceDetail": null,
+              "timeOnBoard": "52分",
+              "transferCount": "1",
+              "isFast": false,
+              "isEasy": true,
+              "isCheap": false,
+              "distance": "41.5km",
+              "airportCompanyNames": [],
+              "withTeiki": false,
+              "teiki": [
+                {
+                  "month": "1",
+                  "price": "31,390"
+                },
+                {
+                  "month": "3",
+                  "price": "89,470"
+                },
+                {
+                  "month": "6",
+                  "price": "169,510"
+                }
+              ],
+              "calendarUrl": "https://calendar.yahoo.co.jp/?V=60\u0026ST=20260427T2157\u0026DUR=0115\u0026TITLE=%E6%9D%B1%E9%8A%80%E5%BA%A7%E2%86%92%E4%B8%89%E3%83%84%E5%A2%83\u0026DESC=21%3A57%20%E6%9D%B1%E9%8A%80%E5%BA%A7%0A%E9%83%BD%E5%96%B6%E6%B5%85%E8%8D%89%E7%B7%9A%E5%BF%AB%E7%89%B9%E3%83%BB%E4%B8%89%E5%B4%8E%E5%8F%A3%E8%A1%8C%0A22%3A52%20%E6%A8%AA%E6%B5%9C%0A%E7%9B%B8%E9%89%84%E6%9C%AC%E7%B7%9A%E5%BF%AB%E9%80%9F%E3%83%BB%E6%B5%B7%E8%80%81%E5%90%8D%E8%A1%8C%0A23%3A12%20%E4%B8%89%E3%83%84%E5%A2%83%0A",
+              "routeSectionXml": "",
+              "availUserPass": false,
+              "approachUrl": "https://approach.yahoo.co.jp/r/ODEHNM?preview=auto\u0026src=https%3A%2F%2Ftransit.yahoo.co.jp%2Fsearch%2Fresult%3Ffrom%3D%25E6%259D%25B1%25E9%258A%2580%25E5%25BA%25A7%26flatlon%3D%252C%252C22930%26to%3D%25E4%25B8%2589%25E3%2583%2584%25E5%25A2%2583%26tlatlon%3D%252C%252C23329%26ym%3D202604%26d%3D27%26hh%3D21%26m1%3D4%26m2%3D5%26datepicker%3D4%252F27%252F2026%26expkind%3D1%26type%3D1%26s%3D0%26ws%3D3%26tws%3D2%26ticket%3Dic%26fromgid%3D%26togid%3D%26userpass%3D0%26shin%3D1%26al%3D1%26ex%3D1%26hb%3D1%26lb%3D1%26sr%3D1%26mtf%3D5"
+            },
+            "detourInfo": null,
+            "edgeInfoList": [
+              {
+                "featureIndex": 5,
+                "edgeIndex": 0,
+                "indexType": 0,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "0_0",
+                  "price": "567",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "東銀座",
+                "stationCode": "22930",
+                "firstStation": false,
+                "railName": "都営浅草線快特・三崎口行",
+                "railNameExcludingDestination": "都営浅草線快特",
+                "destination": "三崎口行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "21:57",
+                    "type": 3
+                  }
+                ],
+                "pointIcon": 0,
+                "pointName": "東銀座",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "1",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "1",
+                    "番線"
+                  ],
+                  "position": [
+                    "[4両] 前",
+                    "[6両] 前",
+                    "[8両] 前",
+                    "[12両] 前"
+                  ]
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "新橋",
+                    "departureTime": "21:59"
+                  },
+                  {
+                    "name": "大門(東京都)",
+                    "departureTime": "22:01"
+                  },
+                  {
+                    "name": "三田(東京都)",
+                    "departureTime": "22:03"
+                  },
+                  {
+                    "name": "泉岳寺",
+                    "departureTime": "22:06"
+                  },
+                  {
+                    "name": "品川",
+                    "departureTime": "22:10"
+                  },
+                  {
+                    "name": "京急蒲田",
+                    "departureTime": "22:18"
+                  },
+                  {
+                    "name": "京急川崎",
+                    "departureTime": "22:22"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": "/station/22930/exit",
+                  "time": "/timetable/22930",
+                  "station": "/station/22930",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.76704442996476\u0026lat=35.66962752164808\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=東銀座"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "f2706d",
+                  "exit": null
+                },
+                "startStationCode": "22930"
+              },
+              {
+                "featureIndex": 5,
+                "edgeIndex": 1,
+                "indexType": 1,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "1_1",
+                  "price": "241",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "横浜",
+                "stationCode": "23368",
+                "firstStation": true,
+                "railName": "相鉄本線快速・海老名行",
+                "railNameExcludingDestination": "相鉄本線快速",
+                "destination": "海老名行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "22:29",
+                    "type": 2
+                  },
+                  {
+                    "time": "22:52",
+                    "type": 1
+                  }
+                ],
+                "pointIcon": 2,
+                "pointName": "横浜",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "3",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "1",
+                    "番線"
+                  ],
+                  "position": []
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "星川",
+                    "departureTime": "22:56"
+                  },
+                  {
+                    "name": "西谷",
+                    "departureTime": "23:01"
+                  },
+                  {
+                    "name": "鶴ケ峰",
+                    "departureTime": "23:04"
+                  },
+                  {
+                    "name": "二俣川",
+                    "departureTime": "23:07"
+                  },
+                  {
+                    "name": "希望ケ丘",
+                    "departureTime": "23:10"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": "/station/23368/exit",
+                  "time": "/timetable/23368",
+                  "station": "/station/23368",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.62123203098406\u0026lat=35.46548527325546\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=横浜"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "0064b9",
+                  "exit": null
+                },
+                "startStationCode": "23368"
+              },
+              {
+                "featureIndex": 5,
+                "edgeIndex": 2,
+                "indexType": 2,
+                "state": 0,
+                "priceInfo": {},
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "三ツ境",
+                "stationCode": "23329",
+                "firstStation": true,
+                "railName": "相鉄本線快速・海老名行",
+                "railNameExcludingDestination": "相鉄本線快速",
+                "destination": "海老名行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "23:12",
+                    "type": 3
+                  }
+                ],
+                "pointIcon": 1,
+                "pointName": "三ツ境",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "3",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "1",
+                    "番線"
+                  ],
+                  "position": []
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "星川",
+                    "departureTime": "22:56"
+                  },
+                  {
+                    "name": "西谷",
+                    "departureTime": "23:01"
+                  },
+                  {
+                    "name": "鶴ケ峰",
+                    "departureTime": "23:04"
+                  },
+                  {
+                    "name": "二俣川",
+                    "departureTime": "23:07"
+                  },
+                  {
+                    "name": "希望ケ丘",
+                    "departureTime": "23:10"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": null,
+                  "time": "/timetable/23329",
+                  "station": "/station/23329",
+                  "loco": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.5025481867806\u0026lat=35.46781722164093\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=23329"
+                },
+                "promotionInfo": null,
+                "accessInfo": null,
+                "startStationCode": "23368"
+              }
+            ]
+          },
+          {
+            "summaryInfo": {
+              "departureTime": "22:00",
+              "arrivalTime": "23:27",
+              "totalTime": "1時間27分",
+              "totalPrice": "759",
+              "totalPriceDetail": null,
+              "timeOnBoard": "1時間5分",
+              "transferCount": "3",
+              "isFast": false,
+              "isEasy": false,
+              "isCheap": true,
+              "distance": "44.6km",
+              "airportCompanyNames": [],
+              "withTeiki": false,
+              "teiki": [
+                {
+                  "month": "1",
+                  "price": "29,350"
+                },
+                {
+                  "month": "3",
+                  "price": "83,670"
+                },
+                {
+                  "month": "6",
+                  "price": "158,500"
+                }
+              ],
+              "calendarUrl": "https://calendar.yahoo.co.jp/?V=60\u0026ST=20260427T2200\u0026DUR=0127\u0026TITLE=%E6%9D%B1%E9%8A%80%E5%BA%A7%E2%86%92%E4%B8%89%E3%83%84%E5%A2%83\u0026DESC=22%3A00%20%E6%9D%B1%E9%8A%80%E5%BA%A7%0A%E6%9D%B1%E4%BA%AC%E3%83%A1%E3%83%88%E3%83%AD%E6%97%A5%E6%AF%94%E8%B0%B7%E7%B7%9A%E3%83%BB%E4%B8%AD%E7%9B%AE%E9%BB%92%E8%A1%8C%0A22%3A25%20%E4%B8%AD%E7%9B%AE%E9%BB%92%0A%E6%9D%B1%E6%80%A5%E6%9D%B1%E6%A8%AA%E7%B7%9A%E6%80%A5%E8%A1%8C%E3%83%BB%E5%85%83%E7%94%BA%E3%83%BB%E4%B8%AD%E8%8F%AF%E8%A1%97%E8%A1%8C%0A23%3A07%20%E6%A8%AA%E6%B5%9C%0A%E7%9B%B8%E9%89%84%E6%9C%AC%E7%B7%9A%E7%89%B9%E6%80%A5%E3%83%BB%E6%B5%B7%E8%80%81%E5%90%8D%E8%A1%8C%0A23%3A22%20%E4%BA%8C%E4%BF%A3%E5%B7%9D%0A%E7%9B%B8%E9%89%84%E6%9C%AC%E7%B7%9A%E3%83%BB%E6%B5%B7%E8%80%81%E5%90%8D%E8%A1%8C%0A23%3A27%20%E4%B8%89%E3%83%84%E5%A2%83%0A",
+              "routeSectionXml": "",
+              "availUserPass": false,
+              "approachUrl": "https://approach.yahoo.co.jp/r/ODEHNM?preview=auto\u0026src=https%3A%2F%2Ftransit.yahoo.co.jp%2Fsearch%2Fresult%3Ffrom%3D%25E6%259D%25B1%25E9%258A%2580%25E5%25BA%25A7%26flatlon%3D%252C%252C22930%26to%3D%25E4%25B8%2589%25E3%2583%2584%25E5%25A2%2583%26tlatlon%3D%252C%252C23329%26ym%3D202604%26d%3D27%26hh%3D21%26m1%3D4%26m2%3D5%26datepicker%3D4%252F27%252F2026%26expkind%3D1%26type%3D1%26s%3D0%26ws%3D3%26tws%3D2%26ticket%3Dic%26fromgid%3D%26togid%3D%26userpass%3D0%26shin%3D1%26al%3D1%26ex%3D1%26hb%3D1%26lb%3D1%26sr%3D1%26mtf%3D6"
+            },
+            "detourInfo": null,
+            "edgeInfoList": [
+              {
+                "featureIndex": 6,
+                "edgeIndex": 0,
+                "indexType": 0,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "0_1",
+                  "price": "518",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "東銀座",
+                "stationCode": "22930",
+                "firstStation": false,
+                "railName": "東京メトロ日比谷線・中目黒行",
+                "railNameExcludingDestination": "東京メトロ日比谷線",
+                "destination": "中目黒行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "22:00",
+                    "type": 3
+                  }
+                ],
+                "pointIcon": 0,
+                "pointName": "東銀座",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "3",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "2",
+                    "番線"
+                  ],
+                  "position": [
+                    "[7両] 前 中 後"
+                  ]
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "銀座",
+                    "departureTime": "22:02"
+                  },
+                  {
+                    "name": "日比谷",
+                    "departureTime": "22:03"
+                  },
+                  {
+                    "name": "霞ケ関(東京都)",
+                    "departureTime": "22:06"
+                  },
+                  {
+                    "name": "虎ノ門ヒルズ",
+                    "departureTime": "22:08"
+                  },
+                  {
+                    "name": "神谷町",
+                    "departureTime": "22:09"
+                  },
+                  {
+                    "name": "六本木",
+                    "departureTime": "22:13"
+                  },
+                  {
+                    "name": "広尾",
+                    "departureTime": "22:16"
+                  },
+                  {
+                    "name": "恵比寿",
+                    "departureTime": "22:19"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": "/station/22930/exit",
+                  "time": "/timetable/22930",
+                  "station": "/station/22930",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.76704442996476\u0026lat=35.66962752164808\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=東銀座"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "a59c95",
+                  "exit": null
+                },
+                "startStationCode": "22930"
+              },
+              {
+                "featureIndex": 6,
+                "edgeIndex": 1,
+                "indexType": 1,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "0_1",
+                  "price": "518",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "中目黒",
+                "stationCode": "22855",
+                "firstStation": false,
+                "railName": "東急東横線急行・元町・中華街行",
+                "railNameExcludingDestination": "東急東横線急行",
+                "destination": "元町・中華街行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "22:21",
+                    "type": 2
+                  },
+                  {
+                    "time": "22:25",
+                    "type": 1
+                  }
+                ],
+                "pointIcon": 2,
+                "pointName": "中目黒",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "1",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "1",
+                    "番線"
+                  ],
+                  "position": [
+                    "[10両] 前 中 後"
+                  ]
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "学芸大学",
+                    "departureTime": "22:28"
+                  },
+                  {
+                    "name": "自由が丘",
+                    "departureTime": "22:31"
+                  },
+                  {
+                    "name": "田園調布",
+                    "departureTime": "22:33"
+                  },
+                  {
+                    "name": "多摩川",
+                    "departureTime": "22:35"
+                  },
+                  {
+                    "name": "武蔵小杉",
+                    "departureTime": "22:38"
+                  },
+                  {
+                    "name": "日吉(神奈川県)",
+                    "departureTime": "22:41"
+                  },
+                  {
+                    "name": "綱島",
+                    "departureTime": "22:44"
+                  },
+                  {
+                    "name": "菊名",
+                    "departureTime": "22:47"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": "/station/22855/exit",
+                  "time": "/timetable/22855",
+                  "station": "/station/22855",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.6988569063859\u0026lat=35.64429545185436\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=中目黒"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "db0242",
+                  "exit": null
+                },
+                "startStationCode": "22855"
+              },
+              {
+                "featureIndex": 6,
+                "edgeIndex": 2,
+                "indexType": 1,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "2_3",
+                  "price": "241",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "横浜",
+                "stationCode": "23368",
+                "firstStation": true,
+                "railName": "相鉄本線特急・海老名行",
+                "railNameExcludingDestination": "相鉄本線特急",
+                "destination": "海老名行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "22:53",
+                    "type": 2
+                  },
+                  {
+                    "time": "23:07",
+                    "type": 1
+                  }
+                ],
+                "pointIcon": 2,
+                "pointName": "横浜",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "2",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "2",
+                    "番線"
+                  ],
+                  "position": [
+                    "[8両] 前 中 後",
+                    "[10両] 前 中 後"
+                  ]
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "西谷",
+                    "departureTime": "23:14"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": "/station/23368/exit",
+                  "time": "/timetable/23368",
+                  "station": "/station/23368",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.62123203098406\u0026lat=35.46548527325546\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=横浜"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "0064b9",
+                  "exit": null
+                },
+                "startStationCode": "23368"
+              },
+              {
+                "featureIndex": 6,
+                "edgeIndex": 3,
+                "indexType": 1,
+                "state": 0,
+                "priceInfo": {
+                  "edgeGroup": "2_3",
+                  "price": "241",
+                  "withTeiki": false,
+                  "isTax10": false,
+                  "cashOnly": false,
+                  "expPrice": "0",
+                  "expType": "特急料金",
+                  "isExpDisplay": false,
+                  "isExpFirst": false,
+                  "isForecast": false
+                },
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "二俣川",
+                "stationCode": "23310",
+                "firstStation": false,
+                "railName": "相鉄本線・海老名行",
+                "railNameExcludingDestination": "相鉄本線",
+                "destination": "海老名行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "23:18",
+                    "type": 2
+                  },
+                  {
+                    "time": "23:22",
+                    "type": 1
+                  }
+                ],
+                "pointIcon": 2,
+                "pointName": "二俣川",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "1",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "1",
+                    "番線"
+                  ],
+                  "position": []
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "希望ケ丘",
+                    "departureTime": "23:25"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": null,
+                  "time": "/timetable/23310",
+                  "station": "/station/23310",
+                  "loco": null,
+                  "fromRoute": null,
+                  "toRoute": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.53229565416495\u0026lat=35.46356802545274\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=二俣川"
+                },
+                "promotionInfo": null,
+                "accessInfo": {
+                  "type": 0,
+                  "classNameList": [
+                    "access"
+                  ],
+                  "color": "0064b9",
+                  "exit": null
+                },
+                "startStationCode": "23310"
+              },
+              {
+                "featureIndex": 6,
+                "edgeIndex": 4,
+                "indexType": 2,
+                "state": 0,
+                "priceInfo": {},
+                "isLandmark": false,
+                "isVia": false,
+                "stationName": "三ツ境",
+                "stationCode": "23329",
+                "firstStation": false,
+                "railName": "相鉄本線・海老名行",
+                "railNameExcludingDestination": "相鉄本線",
+                "destination": "海老名行",
+                "exitName": {
+                  "from": "",
+                  "to": ""
+                },
+                "timeInfo": [
+                  {
+                    "time": "23:27",
+                    "type": 3
+                  }
+                ],
+                "pointIcon": 1,
+                "pointName": "三ツ境",
+                "ridingPositionInfo": {
+                  "departure": [
+                    "1",
+                    "番線"
+                  ],
+                  "arrival": [
+                    "1",
+                    "番線"
+                  ],
+                  "position": []
+                },
+                "preCautionalComment": "",
+                "diaInfoStatus": [],
+                "timeOnBoard": null,
+                "stopStationList": [
+                  {
+                    "name": "希望ケ丘",
+                    "departureTime": "23:25"
+                  }
+                ],
+                "linkInfo": {
+                  "exit": null,
+                  "time": "/timetable/23329",
+                  "station": "/station/23329",
+                  "loco": null,
+                  "map": "https://map.yahoo.co.jp/place?gid=\u0026lon=139.5025481867806\u0026lat=35.46781722164093\u0026zoom=16\u0026.f=transit",
+                  "registerStation": "/stedit/edit?station=23329"
+                },
+                "promotionInfo": null,
+                "accessInfo": null,
+                "startStationCode": "23310"
+              }
+            ]
+          }
+        ],
+        "registerInfoList": [
+          {
+            "isLandmark": false,
+            "landmarkName": "東銀座",
+            "stationName": "東銀座",
+            "stationCode": "22930",
+            "stationLink": "/station/22930",
+            "registerLink": "/stedit/edit?station=東銀座"
+          },
+          {
+            "isLandmark": false,
+            "landmarkName": "三ツ境",
+            "stationName": "三ツ境",
+            "stationCode": "23329",
+            "stationLink": "/station/23329",
+            "registerLink": "/stedit/edit?station=23329"
+          }
+        ],
+        "displayInfo": {
+          "title": "東銀座→三ツ境",
+          "fromName": "東銀座",
+          "toName": "三ツ境",
+          "isPastSearch": false,
+          "hasAirportInfo": false,
+          "realEstateStationId": "22930"
+        },
+        "aroundInfo": {
+          "prevUrl": "/search/result?al=1\u0026d=27\u0026ex=1\u0026expkind=1\u0026from=%E6%9D%B1%E9%8A%80%E5%BA%A7\u0026hb=1\u0026hh=22\u0026lb=1\u0026m=04\u0026m1=5\u0026m2=5\u0026s=0\u0026shin=1\u0026sr=1\u0026ticket=ic\u0026to=%E4%B8%89%E3%83%84%E5%A2%83\u0026type=4\u0026userpass=1\u0026ws=3\u0026y=2026\u0026dispCount=-1\u0026dispType=1\u0026dispDate=202604272145",
+          "nextUrl": "/search/result?al=1\u0026d=27\u0026ex=1\u0026expkind=1\u0026from=%E6%9D%B1%E9%8A%80%E5%BA%A7\u0026hb=1\u0026hh=21\u0026lb=1\u0026m=04\u0026m1=5\u0026m2=8\u0026s=0\u0026shin=1\u0026sr=1\u0026ticket=ic\u0026to=%E4%B8%89%E3%83%84%E5%A2%83\u0026type=1\u0026userpass=1\u0026ws=3\u0026y=2026\u0026dispCount=1\u0026dispType=1\u0026dispDate=202604272145",
+          "searchTypeName": "出発",
+          "searchYMDWText": "2026年04月27日(月)",
+          "searchHMText": "21:45",
+          "dispCountText": ""
+        },
+        "otherQueryInfo": {
+          "fromList": [
+            {
+              "value": ",,22930",
+              "label": "東銀座駅",
+              "code": "22930",
+              "gid": "",
+              "name": "東銀座"
+            }
+          ],
+          "toList": [
+            {
+              "value": ",,23329",
+              "label": "三ツ境駅",
+              "code": "23329",
+              "gid": "",
+              "name": "三ツ境"
+            }
+          ],
+          "viaList": {}
+        },
+        "pagerInfo": {
+          "start": 1,
+          "end": 6,
+          "prevNextThreeUrl": null,
+          "count": 6
+        },
+        "mapImageUrlInfo": null,
+        "jobSearchQueryInfo": {
+          "toStationCode": "23329"
+        }
+      },
+      "pageQuery": {
+        "al": "1",
+        "d": "27",
+        "ex": "1",
+        "expkind": "1",
+        "from": "東銀座",
+        "hb": "1",
+        "hh": "21",
+        "lb": "1",
+        "m": "04",
+        "m1": "4",
+        "m2": "5",
+        "s": "0",
+        "shin": "1",
+        "sr": "1",
+        "ticket": "ic",
+        "to": "三ツ境",
+        "type": "1",
+        "userpass": "1",
+        "ws": "3",
+        "y": "2026",
+        "via": [],
+        "viacode": []
+      },
+      "kousyouResult": {
+        "resultInfo": {
+          "latency": "2",
+          "status": "200",
+          "message": "api success."
+        },
+        "detail": {
+          "kousyou": "交承 平成25年77号 ＪＲデータの内容は、株式会社交通新聞社発行の「JR時刻表」令和8年5月号。\u003cbr\u003eこの時刻データを無断転載・複写し、又は紙媒体、電磁媒体その他いかなる媒体に加工することも禁じます。\u003cbr\u003e一部の内容は株式会社ヴァル研究所がLINEヤフー株式会社の責任において加工を加えたものです。",
+          "jr": "JR時刻表は令和8年5月現在のものです。",
+          "shitetsu": "私鉄時刻表は令和8年4月現在のものです。",
+          "air": "航空時刻表は令和8年5月現在のものです。"
+        }
+      },
+      "routeMemoCrumb": null,
+      "uuid": "38312b67-a328-474a-aef9-1f492d430560",
+      "kadowakiResult": {
+        "enable": 1,
+        "items": [
+          {
+            "enable": 1,
+            "type": 5,
+            "url": "https://www.softbank.jp/naturebank/mission/?anchor=ac_transityahoo\u0026utm_source=y_norikae\u0026utm_medium=web\u0026utm_campaign=lpl",
+            "imageUrl": "https://s.yimg.jp/images/transit/promo/banner/event/NatureBank/bnr600x200.png",
+            "imageAlt": "いつもの乗換案内が森づくりに。NatureBank",
+            "imageWidth": "300",
+            "imageHeight": "100"
+          },
+          {
+            "enable": 1,
+            "type": 5,
+            "url": "https://app.adjust.com/1mfb8lnr?campaign=plus\u0026redirect=https%3A%2F%2Ftransit.yahoo.co.jp%2Fpromo%2Fapp%2Fplus",
+            "imageUrl": "https://s.yimg.jp/images/transit/promo/banner/bnr_plus_600x200.png",
+            "imageAlt": "乗換案内プラス",
+            "imageWidth": "300",
+            "imageHeight": "100"
+          }
+        ]
+      },
+      "stanbyStationInfoResult": {
+        "result": [
+          {
+            "name": "神奈川県横浜市",
+            "type": "ADDRESS",
+            "link": [
+              {
+                "name": "正社員",
+                "type": "FULL",
+                "url": "https://jp.stanby.com/r_0762601e1d5bfda3fb90f8e6e3e0ede7",
+                "nofollow": false
+              },
+              {
+                "name": "アルバイト・パート",
+                "type": "PART",
+                "url": "https://jp.stanby.com/r_cc30aeaedde5b45a2774f6b1080ad6be",
+                "nofollow": false
+              }
+            ]
+          },
+          {
+            "name": "三ツ境駅",
+            "type": "STATION",
+            "link": [
+              {
+                "name": "正社員",
+                "type": "FULL",
+                "url": "https://jp.stanby.com/search?q=%E6%AD%A3%E7%A4%BE%E5%93%A1\u0026l=%E4%B8%89%E3%83%84%E5%A2%83%E9%A7%85",
+                "nofollow": true
+              },
+              {
+                "name": "アルバイト・パート",
+                "type": "PART",
+                "url": "https://jp.stanby.com/r_95db5fcea7bf3a7e019b063c99dc6845",
+                "nofollow": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "__N_SSP": true
+  },
+  "page": "/search/result",
+  "query": {
+    "al": "1",
+    "d": "27",
+    "ex": "1",
+    "expkind": "1",
+    "from": "東銀座",
+    "hb": "1",
+    "hh": "21",
+    "lb": "1",
+    "m": "04",
+    "m1": "4",
+    "m2": "5",
+    "s": "0",
+    "shin": "1",
+    "sr": "1",
+    "ticket": "ic",
+    "to": "三ツ境",
+    "type": "1",
+    "userpass": "1",
+    "ws": "3",
+    "y": "2026",
+    "via": [],
+    "viacode": []
+  },
+  "buildId": "CoIyQFsWuk6oo9KWq79wS",
+  "assetPrefix": "https://web-transit.c.yimg.jp/1.0.73",
+  "isFallback": false,
+  "isExperimentalCompile": false,
+  "gssp": true,
+  "scriptLoader": []
+}
