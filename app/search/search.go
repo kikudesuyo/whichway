@@ -11,17 +11,20 @@ import (
 
 type UniqueRoute struct {
 	ScoredRoute scoring.ScoredRoute
-	FoundIn     []string
+}
+
+func getPatternName(vias []string) string {
+	if len(vias) == 0 {
+		return "経由なし"
+	}
+	return strings.Join(vias, ",") + " 経由"
 }
 
 func RunAll(cfg *config.Config) ([]UniqueRoute, error) {
 	var allScoredRoutes []scoring.ScoredRoute
 
 	for i, vias := range cfg.ViaPatterns {
-		patternName := "経由なし"
-		if len(vias) > 0 {
-			patternName = strings.Join(vias, ",") + " 経由"
-		}
+		patternName := getPatternName(vias)
 		fmt.Printf("[%d/%d] %s のルートを検索中...\n", i+1, len(cfg.ViaPatterns), patternName)
 
 		html, err := transit.FetchRoutesHTML(cfg.FromStation, cfg.ToStation, vias)
@@ -69,27 +72,10 @@ func RunAll(cfg *config.Config) ([]UniqueRoute, error) {
 	for _, sr := range allScoredRoutes {
 		key := generateRouteKey(sr.Route)
 
-		patternName := "経由なし"
-		if len(sr.ViaPatterns) > 0 {
-			patternName = strings.Join(sr.ViaPatterns, ",") + " 経由"
-		}
-
-		if idx, exists := seenKeys[key]; exists {
-			alreadyAdded := false
-			for _, existingPattern := range uniqueRoutes[idx].FoundIn {
-				if existingPattern == patternName {
-					alreadyAdded = true
-					break
-				}
-			}
-			if !alreadyAdded {
-				uniqueRoutes[idx].FoundIn = append(uniqueRoutes[idx].FoundIn, patternName)
-			}
-		} else {
+		if _, exists := seenKeys[key]; !exists {
 			seenKeys[key] = len(uniqueRoutes)
 			uniqueRoutes = append(uniqueRoutes, UniqueRoute{
 				ScoredRoute: sr,
-				FoundIn:     []string{patternName},
 			})
 		}
 	}

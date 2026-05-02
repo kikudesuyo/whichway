@@ -23,9 +23,9 @@ func ParseRoutes(jsonData string) ([]FeatureInfo, error) {
 	if err != nil {
 		return nil, fmt.Errorf("JSONパースエラー: %w", err)
 	}
-	
+
 	features := data.Props.PageProps.NaviSearchParam.FeatureInfoList
-	
+
 	// 乗換不要（相互直通など）の同一列車エッジを除外する
 	for i := range features {
 		var filteredEdges []EdgeInfo
@@ -38,6 +38,6 @@ func ParseRoutes(jsonData string) ([]FeatureInfo, error) {
 		}
 		features[i].EdgeInfoList = filteredEdges
 	}
-	
+
 	return features, nil
 }
