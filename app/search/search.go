@@ -4,10 +4,9 @@ import (
 	"fmt"
 	"sort"
 	"strings"
-
-	"whichway/config"
-	"whichway/scoring"
-	"whichway/transit"
+	"whichway/app/config"
+	"whichway/app/scoring"
+	"whichway/app/transit"
 )
 
 type UniqueRoute struct {
@@ -53,8 +52,13 @@ func RunAll(cfg *config.Config) ([]UniqueRoute, error) {
 		}
 	}
 
-	// スコアが高い順にソート
+	// スコアが高い順にソート。スコアが同じ場合は出発時間が早い方（所要時間が長い方）を優先
 	sort.SliceStable(allScoredRoutes, func(i, j int) bool {
+		if allScoredRoutes[i].Score == allScoredRoutes[j].Score {
+			timeI := scoring.ParseDurationToMinutes(allScoredRoutes[i].Route.SummaryInfo.TotalTime)
+			timeJ := scoring.ParseDurationToMinutes(allScoredRoutes[j].Route.SummaryInfo.TotalTime)
+			return timeI > timeJ
+		}
 		return allScoredRoutes[i].Score > allScoredRoutes[j].Score
 	})
 
@@ -95,11 +99,12 @@ func RunAll(cfg *config.Config) ([]UniqueRoute, error) {
 
 func generateRouteKey(route transit.FeatureInfo) string {
 	var sb strings.Builder
-	sb.WriteString(route.SummaryInfo.DepartureTime)
-	sb.WriteString("-")
+	// 出発時間をキーから除外することで、同じ到着時間＆同じ経路のバリエーションを1つにまとめる
 	sb.WriteString(route.SummaryInfo.ArrivalTime)
 	for _, edge := range route.EdgeInfoList {
+		sb.WriteString("|")
 		sb.WriteString(edge.StationName)
+		sb.WriteString("|")
 		sb.WriteString(edge.RailName)
 	}
 	return sb.String()

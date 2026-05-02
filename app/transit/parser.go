@@ -23,5 +23,21 @@ func ParseRoutes(jsonData string) ([]FeatureInfo, error) {
 	if err != nil {
 		return nil, fmt.Errorf("JSONパースエラー: %w", err)
 	}
-	return data.Props.PageProps.NaviSearchParam.FeatureInfoList, nil
+	
+	features := data.Props.PageProps.NaviSearchParam.FeatureInfoList
+	
+	// 乗換不要（相互直通など）の同一列車エッジを除外する
+	for i := range features {
+		var filteredEdges []EdgeInfo
+		for _, edge := range features[i].EdgeInfoList {
+			// state == 2 または pointName に "乗換不要" が含まれる場合は直通運転の境界駅
+			if edge.State == 2 || regexp.MustCompile(`乗換不要`).MatchString(edge.PointName) {
+				continue
+			}
+			filteredEdges = append(filteredEdges, edge)
+		}
+		features[i].EdgeInfoList = filteredEdges
+	}
+	
+	return features, nil
 }

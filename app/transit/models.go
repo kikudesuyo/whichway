@@ -34,6 +34,8 @@ type EdgeInfo struct {
 	RailName                     string     `json:"railName"`
 	RailNameExcludingDestination string     `json:"railNameExcludingDestination"`
 	Destination                  string     `json:"destination"`
+	State                        int        `json:"state"`
+	PointName                    string     `json:"pointName"`
 	TimeInfo                     []TimeInfo `json:"timeInfo"`
 	PriceInfo                    PriceInfo  `json:"priceInfo"`
 }

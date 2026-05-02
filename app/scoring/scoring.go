@@ -5,8 +5,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
-
-	"whichway/transit"
+	"whichway/app/transit"
 )
 
 type ScoredRoute struct {
@@ -47,7 +46,7 @@ func CalculateScore(route transit.FeatureInfo, preferredLines []string) int {
 	return score
 }
 
-func parseDurationToMinutes(durationStr string) int {
+func ParseDurationToMinutes(durationStr string) int {
 	totalMinutes := 0
 
 	hourRe := regexp.MustCompile(`(\d+)時間`)
