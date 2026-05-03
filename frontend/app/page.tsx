@@ -36,12 +36,27 @@ export default async function Home({ searchParams }: Props) {
         <div className="absolute -bottom-[10%] left-[20%] w-[60vw] h-[60vw] rounded-full bg-sky-50 blur-3xl opacity-50 animate-pulse" style={{ animationDuration: '10s' }} />
       </div>
 
-      <main className="max-w-3xl mx-auto flex flex-col gap-6 sm:gap-10 p-4 sm:p-10 pt-8 sm:pt-20">
-        <header className="flex flex-col gap-2 sm:gap-3 text-center sm:text-left px-2">
-          <h1 className="text-4xl sm:text-6xl font-black tracking-tighter text-slate-900 drop-shadow-sm">
-            Which<span className="bg-gradient-to-br from-blue-600 to-indigo-500 bg-clip-text text-transparent">Way</span>
-          </h1>
-          <p className="text-base sm:text-lg text-slate-500 font-medium tracking-tight">
+      <main className="max-w-3xl mx-auto flex flex-col gap-6 sm:gap-8 p-4 sm:p-8 pt-6 sm:pt-12">
+        <header className="flex flex-col items-center gap-0.5">
+          <div className="flex items-center gap-2">
+            {/* 左ロゴ */}
+            <svg width="40" height="40" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 10H14L20 16H26" stroke="#4f46e5" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M6 24L12 18L18 12H26" stroke="#0ea5e9" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+
+            <h1 className="text-3xl sm:text-5xl font-black tracking-tighter text-slate-900 leading-none drop-shadow-sm">
+              Which<span className="bg-gradient-to-br from-blue-600 to-indigo-500 bg-clip-text text-transparent">Way</span>
+            </h1>
+
+            {/* 右ロゴ（水平反転） */}
+            <svg width="40" height="40" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="scale-x-[-1]">
+              <path d="M6 10H14L20 16H26" stroke="#4f46e5" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M6 24L12 18L18 12H26" stroke="#0ea5e9" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+
+          <p className="text-xs sm:text-sm text-slate-500 font-medium tracking-tight">
             最も効率的で快適なルートを提案します。
           </p>
         </header>
