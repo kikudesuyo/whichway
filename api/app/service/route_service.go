@@ -2,7 +2,6 @@ package service
 
 import (
 	"fmt"
-	"os"
 	"sort"
 	"strings"
 	"sync"
@@ -10,24 +9,27 @@ import (
 	"github.com/kikudesuyo/whichway/api/app/external"
 )
 
-func Search() ([]UniqueRoute, error) {
-	fromStation := os.Getenv("FROM_STATION")
-	toStation := os.Getenv("TO_STATION")
+func Search(fromStation, toStation string, preferredLines []string, viaPatterns []string) ([]UniqueRoute, error) {
 	if fromStation == "" || toStation == "" {
-		return nil, fmt.Errorf("FROM_STATION and TO_STATION must be set in environment variables")
+		return nil, fmt.Errorf("from と to を指定してください")
 	}
 
-	preferredLines := getPreferredLines()
-	viaPatterns := getViaPatterns()
+	if len(viaPatterns) == 0 {
+		viaPatterns = []string{""}
+	}
 
 	var allScoredRoutes []ScoredRoute
 	var mu sync.Mutex
 	var wg sync.WaitGroup
 
-	for i, vias := range viaPatterns {
+	for i, via := range viaPatterns {
 		wg.Add(1)
-		go func(i int, vias []string) {
+		go func(i int, via string) {
 			defer wg.Done()
+			var vias []string
+			if via != "" {
+				vias = []string{via}
+			}
 			patternName := getPatternName(vias)
 
 			routes, err := external.FetchRoutes(fromStation, toStation, vias)
@@ -46,7 +48,7 @@ func Search() ([]UniqueRoute, error) {
 				})
 			}
 			mu.Unlock()
-		}(i, vias)
+		}(i, via)
 	}
 	wg.Wait()
 
@@ -74,45 +76,6 @@ func Search() ([]UniqueRoute, error) {
 	}
 
 	return uniqueRoutes, nil
-}
-
-func getPreferredLines() []string {
-	preferredLinesStr := os.Getenv("PREFERRED_LINES")
-	var preferredLines []string
-	if preferredLinesStr != "" {
-		for _, line := range strings.Split(preferredLinesStr, ",") {
-			trimmed := strings.TrimSpace(line)
-			if trimmed != "" {
-				preferredLines = append(preferredLines, trimmed)
-			}
-		}
-	}
-	return preferredLines
-}
-
-func getViaPatterns() [][]string {
-	viaPatternsStr := os.Getenv("VIA_PATTERNS")
-	var viaPatterns [][]string
-	if viaPatternsStr == "" {
-		viaPatterns = [][]string{nil}
-	} else {
-		for _, pattern := range strings.Split(viaPatternsStr, "|") {
-			pattern = strings.TrimSpace(pattern)
-			if pattern == "" {
-				viaPatterns = append(viaPatterns, nil)
-				continue
-			}
-			var vias []string
-			for _, v := range strings.Split(pattern, ",") {
-				trimmed := strings.TrimSpace(v)
-				if trimmed != "" {
-					vias = append(vias, trimmed)
-				}
-			}
-			viaPatterns = append(viaPatterns, vias)
-		}
-	}
-	return viaPatterns
 }
 
 func getPatternName(vias []string) string {

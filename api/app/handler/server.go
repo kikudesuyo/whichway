@@ -13,7 +13,7 @@ func RunHTTPServer(w http.ResponseWriter, r *http.Request) {
 }
 
 func NewMux() http.Handler {
-	// Cloud Functions does not need .env normally, 
+	// Cloud Functions does not need .env normally,
 	// but we keep it for local and fallback compatibility.
 	_ = godotenv.Load()
 	if _, err := os.Stat("../../.env"); err == nil {

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "WhichWay | 最適なルートを導き出す",
+  title: "WhichWay | 最適なルートを提案",
   description: "あなたの好みに合わせた最適な乗り換えルートを検索します。",
 };
 

@@ -1,5 +1,17 @@
 import { Suspense } from 'react';
 import RouteList from './RouteList';
+import SearchForm from './SearchForm';
+
+interface SearchParams {
+  from?: string;
+  to?: string;
+  preferred_lines?: string | string[];
+  via_patterns?: string | string[];
+}
+
+interface Props {
+  searchParams: Promise<SearchParams>;
+}
 
 function RouteListSkeleton() {
   return (
@@ -11,7 +23,10 @@ function RouteListSkeleton() {
   );
 }
 
-export default function Home() {
+export default async function Home({ searchParams }: Props) {
+  const { from, to, preferred_lines, via_patterns } = await searchParams;
+  const hasSearch = !!from && !!to;
+
   return (
     <div className="min-h-screen bg-white relative overflow-hidden font-sans text-slate-800 selection:bg-blue-100 selection:text-blue-900 z-0">
       {/* Subtle animated background shapes */}
@@ -27,13 +42,21 @@ export default function Home() {
             Which<span className="bg-gradient-to-br from-blue-600 to-indigo-500 bg-clip-text text-transparent">Way</span>
           </h1>
           <p className="text-base sm:text-lg text-slate-500 font-medium tracking-tight">
-            最も効率的で快適なルートを導き出します。
+            最も効率的で快適なルートを提案します。
           </p>
         </header>
 
-        <Suspense fallback={<RouteListSkeleton />}>
-          <RouteList />
+        {/* 検索フォーム */}
+        <Suspense>
+          <SearchForm />
         </Suspense>
+
+        {/* 検索結果 */}
+        {hasSearch && (
+          <Suspense fallback={<RouteListSkeleton />}>
+            <RouteList from={from} to={to} preferredLines={preferred_lines} viaPatterns={via_patterns} />
+          </Suspense>
+        )}
       </main>
     </div>
   );
