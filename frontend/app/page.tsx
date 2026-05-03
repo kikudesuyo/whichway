@@ -29,12 +29,6 @@ export default async function Home({ searchParams }: Props) {
 
   return (
     <div className="min-h-screen bg-white relative overflow-hidden font-sans text-slate-800 selection:bg-blue-100 selection:text-blue-900 z-0">
-      {/* Subtle animated background shapes */}
-      <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-        <div className="absolute -top-[10%] -left-[10%] w-[40vw] h-[40vw] rounded-full bg-blue-50 blur-3xl opacity-60 animate-pulse" style={{ animationDuration: '8s' }} />
-        <div className="absolute top-[20%] -right-[10%] w-[50vw] h-[50vw] rounded-full bg-indigo-50/80 blur-3xl opacity-60 animate-pulse" style={{ animationDuration: '12s' }} />
-        <div className="absolute -bottom-[10%] left-[20%] w-[60vw] h-[60vw] rounded-full bg-sky-50 blur-3xl opacity-50 animate-pulse" style={{ animationDuration: '10s' }} />
-      </div>
 
       <main className="max-w-3xl mx-auto flex flex-col gap-6 sm:gap-8 p-4 sm:p-8 pt-6 sm:pt-12">
         <header className="flex flex-col items-center gap-0.5">
