@@ -5,7 +5,8 @@ import (
 	"os"
 	"sort"
 	"strings"
-	"whichway/app/external"
+
+	"github.com/kikudesuyo/whichway/api/app/external"
 )
 
 func Search() ([]UniqueRoute, error) {

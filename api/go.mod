@@ -1,4 +1,4 @@
-module whichway
+module github.com/kikudesuyo/whichway/api
 
 go 1.25.0
 

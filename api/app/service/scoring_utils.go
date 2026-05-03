@@ -5,7 +5,8 @@ import (
 	"strconv"
 	"strings"
 	"time"
-	"whichway/app/external"
+
+	"github.com/kikudesuyo/whichway/api/app/external"
 )
 
 func CalculateScore(route external.TransitResp, preferredLines []string) int {

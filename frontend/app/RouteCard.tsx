@@ -3,115 +3,153 @@
 import { useState } from 'react';
 import { UniqueRoute } from './types';
 
-const InfoChip = ({ children, icon }: { children: React.ReactNode, icon?: React.ReactNode }) => (
-  <span className="flex items-center gap-1 px-2 py-0.5 bg-slate-50 rounded-md border border-slate-100 text-xs font-bold text-slate-600">
-    {icon}
-    {children}
-  </span>
-);
+const InfoChip = ({ children, icon, color = "slate" }: { children: React.ReactNode, icon?: React.ReactNode, color?: string }) => {
+  const colors: Record<string, string> = {
+    slate: "bg-slate-50 text-slate-600 border-slate-100",
+    indigo: "bg-indigo-50 text-indigo-600 border-indigo-100/50",
+    emerald: "bg-emerald-50 text-emerald-600 border-emerald-100/50",
+    amber: "bg-amber-50 text-amber-600 border-amber-100/50",
+  };
+  
+  return (
+    <span className={`flex items-center gap-1 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg sm:rounded-xl border text-[9px] sm:text-[10px] font-bold tracking-tight ${colors[color]}`}>
+      {icon}
+      {children}
+    </span>
+  );
+};
 
 export default function RouteCard({ r, i }: { r: UniqueRoute, i: number }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Extract unique rail names for the summary
-  const rails = r.ScoredRoute.Route.edgeInfoList
-    .map(edge => edge.railName)
-    .filter((name, index, self) => name && self.indexOf(name) === index);
+  const edges = r.ScoredRoute.Route.edgeInfoList;
+  
+  const isThroughService = (edge: any, idx: number) => {
+    if (idx === 0 || idx === edges.length - 1) return false;
+    const arrTime = edge.timeInfo.find((t: any) => t.type === 2 || t.type === 4)?.time;
+    const depTime = edge.timeInfo.find((t: any) => t.type === 1 || t.type === 3)?.time;
+    return arrTime === depTime && arrTime !== undefined;
+  };
+
+  const significantEdges = edges.filter((edge, idx) => !isThroughService(edge, idx));
+  const isDirect = r.ScoredRoute.Route.summaryInfo.transferCount === "0";
 
   return (
-    <div className="group relative bg-white border border-slate-200/60 rounded-[2rem] shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgb(0,0,0,0.06)] transition-all duration-300 ease-out overflow-hidden">
+    <div className="group relative bg-white border border-slate-200/60 rounded-[1.8rem] sm:rounded-[2.5rem] shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_15px_40px_rgb(0,0,0,0.08)] transition-all duration-500 ease-out overflow-hidden mb-4 mx-1">
       {/* Main Header / Summary (Always visible) */}
       <div 
-        className="p-5 sm:p-6 cursor-pointer"
+        className="p-5 sm:p-8 cursor-pointer select-none"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 sm:gap-6">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3 sm:gap-4">
-              <span className="text-2xl sm:text-3xl font-black tracking-tight text-slate-900">
+            <div className="flex items-center gap-3 sm:gap-6">
+              <span className="text-2xl sm:text-4xl font-black tracking-tighter text-slate-900 leading-none">
                 {r.ScoredRoute.Route.summaryInfo.departureTime}
               </span>
-              <div className="flex items-center">
-                <div className="w-4 h-[1.5px] bg-slate-300 rounded-full" />
-              </div>
-              <span className="text-2xl sm:text-3xl font-black tracking-tight text-slate-900">
+              <div className="w-5 sm:w-8 h-[2px] bg-slate-200 rounded-full" />
+              <span className="text-2xl sm:text-4xl font-black tracking-tighter text-slate-900 leading-none">
                 {r.ScoredRoute.Route.summaryInfo.arrivalTime}
               </span>
             </div>
             
-            <div className="flex items-center gap-2">
-              <div className="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-indigo-50 text-indigo-600 border border-indigo-100/50">
-                <span className="text-[9px] font-bold uppercase opacity-60">Score</span>
-                <span className="font-extrabold text-xs">{r.ScoredRoute.Score}</span>
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="flex items-center gap-1 sm:gap-1.5 px-2 py-1 sm:px-3 sm:py-1.5 rounded-xl sm:rounded-2xl bg-indigo-600 text-white shadow-md shadow-indigo-100">
+                <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-widest opacity-80">Score</span>
+                <span className="font-black text-xs sm:text-sm">{r.ScoredRoute.Score}</span>
               </div>
-              <div className={`p-1.5 rounded-full bg-slate-50 text-slate-400 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
+              <div className={`p-1.5 sm:p-2 rounded-full bg-slate-50 text-slate-400 transition-all duration-500 ${isOpen ? 'rotate-180 bg-slate-900 text-white' : ''}`}>
+                <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" /></svg>
               </div>
             </div>
           </div>
 
-          <div className="flex items-center gap-2 flex-wrap">
-            <InfoChip icon={<svg className="w-3 h-3 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>}>
+          <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+            <InfoChip icon={<svg className="w-3 h-3 sm:w-3.5 sm:h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>}>
               {r.ScoredRoute.Route.summaryInfo.totalTime}
             </InfoChip>
-            <InfoChip>{r.ScoredRoute.Route.summaryInfo.totalPrice}円</InfoChip>
-            <InfoChip>乗換{r.ScoredRoute.Route.summaryInfo.transferCount}回</InfoChip>
+            <InfoChip color="emerald">{r.ScoredRoute.Route.summaryInfo.totalPrice}円</InfoChip>
+            {isDirect ? (
+              <InfoChip color="amber">乗り換えなし</InfoChip>
+            ) : (
+              <InfoChip>乗換{r.ScoredRoute.Route.summaryInfo.transferCount}回</InfoChip>
+            )}
           </div>
 
-          {/* Rail Summary (Important for closed state) */}
+          {/* Optimized Route Summary (Responsive) */}
           <div className="flex flex-col gap-2 mt-1">
-            {rails.map((rail, idx) => (
-              <div key={idx} className="flex items-center gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 shrink-0" />
-                <span className="text-[11px] sm:text-xs font-bold text-slate-700 leading-none">
-                  {rail}
-                </span>
-              </div>
-            ))}
+            <div className="flex flex-wrap items-center gap-y-2 gap-x-1.5 sm:gap-x-3">
+              {significantEdges.map((edge, idx) => (
+                <div key={idx} className="flex items-center gap-1.5 sm:gap-3">
+                  <span className="text-[11px] sm:text-xs font-black text-slate-800 tracking-tight whitespace-nowrap">{edge.stationName}</span>
+                  {idx < significantEdges.length - 1 && (
+                    <div className="flex items-center gap-1 sm:gap-2 px-1.5 py-0.5 sm:px-3 sm:py-1 bg-slate-50 border border-slate-100 rounded-md sm:rounded-lg">
+                      <span className="text-[9px] sm:text-[10px] font-bold text-slate-500 truncate max-w-[60px] sm:max-w-none">
+                        {edges[edges.findIndex(e => e.stationName === edge.stationName)].railName}
+                      </span>
+                      <svg className="w-2.5 h-2.5 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" /></svg>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
       {/* Expanded Details (Timeline) */}
-      <div className={`transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
-        <div className="px-5 pb-6 sm:px-6 sm:pb-8 pt-2 border-t border-slate-50">
-          <div className="bg-slate-50/50 rounded-2xl p-4 sm:p-5 border border-slate-100/50">
+      <div className={`transition-all duration-700 cubic-bezier(0.34, 1.56, 0.64, 1) ${isOpen ? 'max-h-[2500px] opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
+        <div className="px-5 pb-6 sm:px-8 sm:pb-12 pt-2 border-t border-slate-50">
+          <div className="bg-slate-50/70 rounded-[1.5rem] sm:rounded-[2rem] p-4 sm:p-8 border border-slate-100/50">
             <div className="flex flex-col gap-0 relative">
-              <div className="absolute left-[9px] top-4 bottom-4 w-0.5 bg-slate-200 z-0"></div>
-              {r.ScoredRoute.Route.edgeInfoList.map((edge, eIdx) => (
-                <div key={eIdx} className="flex gap-4 items-start relative z-10 py-1.5 group/edge">
-                  <div className={`w-[18px] h-[18px] rounded-full border-[4px] mt-1 flex-shrink-0 shadow-sm transition-all duration-300 ${eIdx === 0 || eIdx === r.ScoredRoute.Route.edgeInfoList.length - 1 ? 'bg-white border-slate-800' : 'bg-white border-slate-300'}`} />
-                  <div className="flex flex-col w-full">
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
-                      <p className={`font-bold text-sm sm:text-base tracking-tight ${eIdx === 0 || eIdx === r.ScoredRoute.Route.edgeInfoList.length - 1 ? 'text-slate-900' : 'text-slate-700'}`}>
-                        {edge.stationName}
-                      </p>
-                      {edge.timeInfo && edge.timeInfo.length > 0 && (
-                        <div className="flex gap-1 items-center">
-                          {edge.timeInfo.map((ti, tIdx) => {
-                            let label = ti.type === 1 || (ti.type === 3 && eIdx === 0) ? "発" : "着";
-                            let colorClasses = label === "発" 
-                              ? "bg-emerald-50/80 text-emerald-700 border-emerald-100/50" 
-                              : "bg-orange-50/80 text-orange-700 border-orange-100/50";
-                            
-                            return (
-                              <span key={tIdx} className={`px-1.5 py-0.5 text-[9px] sm:text-[10px] font-bold rounded border ${colorClasses}`}>
-                                {ti.time} <span className="opacity-70 font-medium text-[8px]">{label}</span>
-                              </span>
-                            );
-                          })}
+              <div className="absolute left-[9px] sm:left-[11px] top-6 bottom-6 w-0.5 bg-slate-200/80 z-0"></div>
+              
+              {edges.map((edge, eIdx) => {
+                if (isThroughService(edge, eIdx)) return null;
+
+                return (
+                  <div key={eIdx} className="flex gap-4 sm:gap-6 items-start relative z-10 py-2 sm:py-3 group/edge">
+                    <div className={`w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] rounded-full border-[4px] sm:border-[5px] mt-1 flex-shrink-0 shadow-md transition-all duration-500 ${eIdx === 0 || eIdx === edges.length - 1 ? 'bg-white border-slate-900 scale-110' : 'bg-white border-slate-300'}`} />
+                    <div className="flex flex-col w-full min-w-0">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2">
+                        <p className={`font-black text-base sm:text-xl tracking-tighter truncate ${eIdx === 0 || eIdx === edges.length - 1 ? 'text-slate-900' : 'text-slate-800'}`}>
+                          {edge.stationName}
+                        </p>
+                        {edge.timeInfo && edge.timeInfo.length > 0 && (
+                          <div className="flex gap-1.5 sm:gap-2 items-center overflow-x-auto no-scrollbar">
+                            {edge.timeInfo.map((ti: any, tIdx: number) => {
+                              const label = ti.type === 1 || (ti.type === 3 && eIdx === 0) ? "発" : "着";
+                              const colorClasses = label === "発" 
+                                ? "bg-emerald-50 text-emerald-700 border-emerald-100" 
+                                : "bg-orange-50 text-orange-700 border-orange-100";
+                              
+                              return (
+                                <span key={tIdx} className={`px-1.5 py-0.5 sm:px-2 sm:py-1 text-[10px] sm:text-xs font-black rounded-md sm:rounded-lg border whitespace-nowrap ${colorClasses} shadow-sm`}>
+                                  {ti.time} <span className="opacity-60 font-bold text-[8px] sm:text-[10px] ml-0.5">{label}</span>
+                                </span>
+                              );
+                            })}
+                          </div>
+                        )}
+                      </div>
+                      
+                      {eIdx < edges.length - 1 && (
+                        <div className="mt-3 mb-4 sm:mt-4 sm:mb-6 relative">
+                          <div className="px-3 py-1.5 sm:px-4 sm:py-2.5 rounded-xl sm:rounded-2xl bg-white border border-slate-100 shadow-sm inline-flex items-center gap-2 sm:gap-3 max-w-full overflow-hidden transition-all duration-300">
+                            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-indigo-500 animate-pulse flex-shrink-0" />
+                            <span className="text-[10px] sm:text-sm font-black text-slate-700 tracking-tight truncate">
+                              {edge.railName}
+                              {isThroughService(edges[eIdx + 1], eIdx + 1) && (
+                                <span className="ml-1.5 px-1 py-0.5 bg-slate-100 text-slate-500 text-[8px] sm:text-[10px] rounded uppercase font-black">直通</span>
+                              )}
+                            </span>
+                          </div>
                         </div>
                       )}
                     </div>
-                    {eIdx < r.ScoredRoute.Route.edgeInfoList.length - 1 && (
-                      <div className="mt-1.5 mb-3 px-2 py-1 rounded-lg bg-white border border-slate-100 shadow-sm inline-flex items-center gap-1.5 max-w-fit">
-                        <svg className="w-2.5 h-2.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg>
-                        <span className="text-[10px] sm:text-[11px] font-bold text-slate-500 tracking-wide">{edge.railName}</span>
-                      </div>
-                    )}
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>

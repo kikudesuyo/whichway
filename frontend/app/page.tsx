@@ -21,12 +21,12 @@ export default function Home() {
         <div className="absolute -bottom-[10%] left-[20%] w-[60vw] h-[60vw] rounded-full bg-sky-50 blur-3xl opacity-50 animate-pulse" style={{ animationDuration: '10s' }} />
       </div>
 
-      <main className="max-w-3xl mx-auto flex flex-col gap-10 p-4 sm:p-10 pt-12 sm:pt-20">
-        <header className="flex flex-col gap-3 text-center sm:text-left">
-          <h1 className="text-5xl sm:text-6xl font-black tracking-tighter text-slate-900 drop-shadow-sm">
+      <main className="max-w-3xl mx-auto flex flex-col gap-6 sm:gap-10 p-4 sm:p-10 pt-8 sm:pt-20">
+        <header className="flex flex-col gap-2 sm:gap-3 text-center sm:text-left px-2">
+          <h1 className="text-4xl sm:text-6xl font-black tracking-tighter text-slate-900 drop-shadow-sm">
             Which<span className="bg-gradient-to-br from-blue-600 to-indigo-500 bg-clip-text text-transparent">Way</span>
           </h1>
-          <p className="text-lg text-slate-500 font-medium tracking-tight">
+          <p className="text-base sm:text-lg text-slate-500 font-medium tracking-tight">
             最も効率的で快適なルートを導き出します。
           </p>
         </header>

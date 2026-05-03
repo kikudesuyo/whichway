@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"whichway/app/handler"
 
 	"github.com/joho/godotenv"
+	"github.com/kikudesuyo/whichway/api/app/handler"
 )
 
 func RunHTTPServer(w http.ResponseWriter, r *http.Request) {
@@ -17,7 +17,7 @@ func RunHTTPServer(w http.ResponseWriter, r *http.Request) {
 func newMux() http.Handler {
 	err := godotenv.Load()
 	if err != nil {
-		godotenv.Load("../.env")
+		godotenv.Load("../../.env")
 	}
 
 	mux := http.NewServeMux()

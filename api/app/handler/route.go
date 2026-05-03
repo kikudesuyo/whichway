@@ -4,7 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"whichway/app/service"
+
+	"github.com/kikudesuyo/whichway/api/app/service"
 )
 
 type RouteResp struct {

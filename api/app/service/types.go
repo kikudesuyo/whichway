@@ -1,6 +1,6 @@
 package service
 
-import "whichway/app/external"
+import "github.com/kikudesuyo/whichway/api/app/external"
 
 type ScoredRoute struct {
 	Score       int
