@@ -5,6 +5,7 @@ import (
 	"os"
 	"sort"
 	"strings"
+	"sync"
 
 	"github.com/kikudesuyo/whichway/api/app/external"
 )
@@ -20,26 +21,34 @@ func Search() ([]UniqueRoute, error) {
 	viaPatterns := getViaPatterns()
 
 	var allScoredRoutes []ScoredRoute
+	var mu sync.Mutex
+	var wg sync.WaitGroup
 
 	for i, vias := range viaPatterns {
-		patternName := getPatternName(vias)
-		fmt.Printf("[%d/%d] %s のルートを検索中...\n", i+1, len(viaPatterns), patternName)
+		wg.Add(1)
+		go func(i int, vias []string) {
+			defer wg.Done()
+			patternName := getPatternName(vias)
 
-		routes, err := external.FetchRoutes(fromStation, toStation, vias)
-		if err != nil {
-			fmt.Println("  -> 取得失敗:", err)
-			continue
-		}
+			routes, err := external.FetchRoutes(fromStation, toStation, vias)
+			if err != nil {
+				fmt.Printf("[%d/%d] %s -> 取得失敗: %v\n", i+1, len(viaPatterns), patternName, err)
+				return
+			}
 
-		for _, route := range routes {
-			score := CalculateScore(route, preferredLines)
-			allScoredRoutes = append(allScoredRoutes, ScoredRoute{
-				Score:       score,
-				Route:       route,
-				ViaPatterns: vias,
-			})
-		}
+			mu.Lock()
+			for _, route := range routes {
+				score := CalculateScore(route, preferredLines)
+				allScoredRoutes = append(allScoredRoutes, ScoredRoute{
+					Score:       score,
+					Route:       route,
+					ViaPatterns: vias,
+				})
+			}
+			mu.Unlock()
+		}(i, vias)
 	}
+	wg.Wait()
 
 	sort.SliceStable(allScoredRoutes, func(i, j int) bool {
 		if allScoredRoutes[i].Score == allScoredRoutes[j].Score {
