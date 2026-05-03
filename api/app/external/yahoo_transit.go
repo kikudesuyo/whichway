@@ -43,7 +43,8 @@ func fetchRoutesHTML(from string, to string, vias []string) (string, error) {
 		q.Add("via", via)
 	}
 
-	now := time.Now()
+	jst, _ := time.LoadLocation("Asia/Tokyo")
+	now := time.Now().In(jst)
 	q.Set("y", fmt.Sprintf("%04d", now.Year()))
 	q.Set("m", fmt.Sprintf("%02d", int(now.Month())))
 	q.Set("d", fmt.Sprintf("%02d", now.Day()))

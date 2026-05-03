@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter, useSearchParams } from 'next/navigation';
-import { KeyboardEvent, useEffect, useRef, useState } from 'react';
+import { KeyboardEvent, useEffect, useRef, useState, useTransition } from 'react';
 import { loadFormValues, saveFormValues } from './lib/formStorage';
 
 interface TagInputProps {
@@ -102,12 +102,8 @@ export default function SearchForm() {
   const [showAdvanced, setShowAdvanced] = useState(
     !!(searchParams.getAll('preferred_lines').length || searchParams.getAll('via_patterns').length)
   );
-  const [loading, setLoading] = useState(false);
+  const [isPending, startTransition] = useTransition();
   const [showHelp, setShowHelp] = useState(false);
-
-  useEffect(() => {
-    setLoading(false);
-  }, [searchParams]);
 
   // localStorage から復元（searchParams がなければ）
   useEffect(() => {
@@ -128,14 +124,15 @@ export default function SearchForm() {
 
   const submitSearch = () => {
     if (!from.trim() || !to.trim()) return;
-    setLoading(true);
     saveFormValues({ from: from.trim(), to: to.trim(), preferredLines, viaPatterns });
     const params = new URLSearchParams();
     params.set('from', from.trim());
     params.set('to', to.trim());
     preferredLines.forEach(v => params.append('preferred_lines', v));
     viaPatterns.forEach(v => params.append('via_patterns', v));
-    router.push(`/?${params.toString()}`);
+    startTransition(() => {
+      router.push(`/?${params.toString()}`);
+    });
   };
 
   const handleStationKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -195,10 +192,10 @@ export default function SearchForm() {
           id="search-button"
           type="button"
           onClick={submitSearch}
-          disabled={loading || !from.trim() || !to.trim()}
+          disabled={isPending || !from.trim() || !to.trim()}
           className="flex items-center justify-center gap-2 bg-gradient-to-br from-blue-600 to-indigo-500 text-white font-bold text-sm px-6 py-3 rounded-xl shadow-sm hover:shadow-md hover:from-blue-500 hover:to-indigo-400 active:scale-95 transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100 shrink-0"
         >
-          {loading ? (
+          {isPending ? (
             <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />

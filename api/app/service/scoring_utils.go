@@ -59,7 +59,8 @@ func parsePrice(priceStr string) int {
 }
 
 func getAbsoluteMinutesFromNow(timeStr string) int {
-	now := time.Now()
+	jst, _ := time.LoadLocation("Asia/Tokyo")
+	now := time.Now().In(jst)
 	parts := strings.Split(timeStr, ":")
 	if len(parts) != 2 {
 		return 0

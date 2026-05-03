@@ -67,7 +67,7 @@ export default function RouteCard({ r, i }: { r: UniqueRoute, i: number }) {
                   #{i + 1}
                 </span>
               )}
-              <div className={`p-1.5 sm:p-2 rounded-full bg-slate-50 text-slate-600 transition-all duration-500 ${isOpen ? 'rotate-180 bg-slate-900 text-white' : ''}`}>
+              <div className={`p-1.5 sm:p-2 rounded-full bg-slate-50 text-slate-600 transition-all duration-200 ${isOpen ? 'rotate-180 bg-slate-900 text-white' : ''}`}>
                 <svg className="w-4 h-4 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" /></svg>
               </div>
             </div>
@@ -107,7 +107,7 @@ export default function RouteCard({ r, i }: { r: UniqueRoute, i: number }) {
       </div>
 
       {/* Expanded Details (Timeline) */}
-      <div className={`transition-all duration-700 cubic-bezier(0.34, 1.56, 0.64, 1) ${isOpen ? 'max-h-[2500px] opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
+      <div className={`transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[2500px] opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
         <div className="px-5 pb-6 sm:px-8 sm:pb-12 pt-2 border-t border-slate-50">
           <div className="bg-slate-50/70 rounded-[1.5rem] sm:rounded-[2rem] p-4 sm:p-8 border border-slate-100/50">
             <div className="flex flex-col gap-0 relative">
