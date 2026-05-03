@@ -54,12 +54,21 @@ export default function RouteCard({ r, i }: { r: UniqueRoute, i: number }) {
             </div>
             
             <div className="flex items-center gap-2 sm:gap-3">
-              <div className="flex items-center gap-1 sm:gap-1.5 px-2 py-1 sm:px-3 sm:py-1.5 rounded-xl sm:rounded-2xl bg-indigo-600 text-white shadow-md shadow-indigo-100">
-                <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-widest opacity-80">Score</span>
-                <span className="font-black text-xs sm:text-sm">{r.ScoredRoute.Score}</span>
-              </div>
-              <div className={`p-1.5 sm:p-2 rounded-full bg-slate-50 text-slate-400 transition-all duration-500 ${isOpen ? 'rotate-180 bg-slate-900 text-white' : ''}`}>
-                <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" /></svg>
+              {i === 0 ? (
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400 drop-shadow-sm" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M2 19h20v2H2v-2zm2-2l-1.5-9L8 11l4-8 4 8 5.5-3L20 17H4z" />
+                </svg>
+              ) : (
+                <span className={`text-xs sm:text-sm font-black tabular-nums ${
+                  i === 1 ? 'text-slate-500' :
+                  i === 2 ? 'text-orange-500' :
+                  'text-slate-300'
+                }`}>
+                  #{i + 1}
+                </span>
+              )}
+              <div className={`p-1.5 sm:p-2 rounded-full bg-slate-50 text-slate-600 transition-all duration-500 ${isOpen ? 'rotate-180 bg-slate-900 text-white' : ''}`}>
+                <svg className="w-4 h-4 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" /></svg>
               </div>
             </div>
           </div>
