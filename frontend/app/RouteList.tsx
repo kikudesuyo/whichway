@@ -21,7 +21,8 @@ export default async function RouteList({ from, to, preferredLines, viaPatterns 
     const params = new URLSearchParams({ from, to });
     toArray(preferredLines).forEach(v => params.append('preferred_lines', v));
     toArray(viaPatterns).forEach(v => params.append('via_patterns', v));
-    const url = `http://localhost:8081/api/routes?${params.toString()}`;
+    const apiBase = process.env.API_BASE_URL;
+    const url = `${apiBase}/api/routes?${params.toString()}`;
     const res = await fetch(url, { cache: 'no-store' });
     if (!res.ok) throw new Error('Failed to fetch routes');
     const data: ApiResponse = await res.json();
