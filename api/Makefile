@@ -20,12 +20,12 @@ lint:
 gcloud-login:
 	gcloud auth application-default set-quota-project ${PROJECT}
 
-# 本番環境 Cloud Runへデプロイ
+# 本番環境 Cloud へデプロイ
 deploy:
 	make __deploy project=${PROJECT}
 
 __deploy:
-	gcloud functions deploy travel-whichway-api-go \
+	gcloud functions deploy whichway \
 	  --gen2 \
 	  --project ${project} \
 	  --region asia-northeast1 \
@@ -34,6 +34,4 @@ __deploy:
 	  --entry-point RunHTTPServer \
 	  --trigger-http \
 	  --timeout=540s \
-	  --allow-unauthenticated \
-	  --env-vars-file .env.yaml
-
+	  --allow-unauthenticated
