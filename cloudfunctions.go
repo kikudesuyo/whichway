@@ -1,7 +1,6 @@
 package cloudfunctions
 
 import (
-	"github.com/kikudesuyo/whichway/app"
 
 	// required by vendor dir deployment by Cloud Functions
 	_ "github.com/GoogleCloudPlatform/functions-framework-go/funcframework"

@@ -4,8 +4,9 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"whichway/app/config"
 	"whichway/app/handler"
+
+	"github.com/joho/godotenv"
 )
 
 func RunHTTPServer(w http.ResponseWriter, r *http.Request) {
@@ -14,13 +15,14 @@ func RunHTTPServer(w http.ResponseWriter, r *http.Request) {
 }
 
 func newMux() http.Handler {
-	cfg, err := config.LoadConfig()
+	err := godotenv.Load()
 	if err != nil {
-		panic("起動エラー: " + err.Error())
+		godotenv.Load("../.env")
 	}
+
 	mux := http.NewServeMux()
-	// cfgを渡す
-	mux.HandleFunc("/api/routes", handler.RoutesHandler(cfg))
+	// ハンドラを登録
+	mux.HandleFunc("/api/routes", handler.HandleRoutes)
 
 	return mux
 }
