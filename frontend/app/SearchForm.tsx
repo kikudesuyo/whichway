@@ -139,6 +139,8 @@ export default function SearchForm() {
     if (e.key === 'Enter') submitSearch();
   };
 
+  const swapStations = () => (setFrom(to), setTo(from));
+
   return (
     <form
       onSubmit={(e) => e.preventDefault()}
@@ -163,11 +165,19 @@ export default function SearchForm() {
           />
         </div>
 
-        {/* 矢印 */}
-        <div className="hidden sm:flex items-center justify-center text-slate-300">
-          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
+        {/* 入れ替えボタン */}
+        <div className="flex sm:flex items-center justify-center">
+          <button
+            type="button"
+            onClick={swapStations}
+            disabled={isPending}
+            className="flex items-center justify-center w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-700 transition-all duration-150 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100"
+            aria-label="出発地と目的地を入れ替え"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+            </svg>
+          </button>
         </div>
 
         {/* 目的地 */}
