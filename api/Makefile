@@ -1,7 +1,7 @@
 .PHONY: init build dev lint
 
 GO111MODULE=on
-PROJECT=whichway-494614
+PROJECT=point-hub-496713
 
 init:
 	go mod download
@@ -25,7 +25,7 @@ deploy:
 	make __deploy project=${PROJECT}
 
 __deploy:
-	gcloud functions deploy whichway \
+	gcloud functions deploy point-hub \
 	  --gen2 \
 	  --project ${project} \
 	  --region asia-northeast1 \

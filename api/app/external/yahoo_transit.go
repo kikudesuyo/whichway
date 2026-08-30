@@ -147,15 +147,31 @@ type SummaryInfo struct {
 }
 
 type EdgeInfo struct {
-	StationName                  string     `json:"stationName"`
-	RailName                     string     `json:"railName"`
-	RailNameExcludingDestination string     `json:"railNameExcludingDestination"`
-	Destination                  string     `json:"destination"`
-	State                        int        `json:"state"`
-	PointName                    string     `json:"pointName"`
-	TimeInfo                     []TimeInfo `json:"timeInfo"`
-	PriceInfo                    PriceInfo  `json:"priceInfo"`
+	StationName                  string              `json:"stationName"`
+	RailName                     string              `json:"railName"`
+	RailNameExcludingDestination string              `json:"railNameExcludingDestination"`
+	Destination                  string              `json:"destination"`
+	State                        int                 `json:"state"`
+	PointName                    string              `json:"pointName"`
+	TimeInfo                     []TimeInfo          `json:"timeInfo"`
+	PriceInfo                    PriceInfo           `json:"priceInfo"`
+	RidingPositionInfo           *RidingPositionInfo `json:"ridingPositionInfo"`
+	StopStationList              []StopStation       `json:"stopStationList"`
+	DiaInfoStatus                []DiaInfoStatus     `json:"diaInfoStatus"`
 }
+
+type RidingPositionInfo struct {
+	Departure []string `json:"departure"`
+	Arrival   []string `json:"arrival"`
+	Position  []string `json:"position"`
+}
+
+type StopStation struct {
+	Name          string `json:"name"`
+	DepartureTime string `json:"departureTime"`
+}
+
+type DiaInfoStatus map[string]any
 
 type TimeInfo struct {
 	Time string `json:"time"`

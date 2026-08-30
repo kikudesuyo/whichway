@@ -1,3 +1,12 @@
+export interface RouteEdge {
+  stationName: string;
+  railName: string;
+  timeInfo: Array<{ time: string; type: number }>;
+  ridingPositionInfo?: { departure?: string[]; arrival?: string[]; position?: string[] } | null;
+  stopStationList?: Array<{ name: string; departureTime: string }>;
+  diaInfoStatus?: Array<Record<string, string | number | boolean | null>>;
+}
+
 export interface UniqueRoute {
   ScoredRoute: {
     Score: number;
@@ -9,14 +18,7 @@ export interface UniqueRoute {
         totalPrice: string;
         transferCount: string;
       };
-      edgeInfoList: Array<{
-        stationName: string;
-        railName: string;
-        timeInfo: Array<{
-          time: string;
-          type: number;
-        }>;
-      }>;
+      edgeInfoList: RouteEdge[];
     };
     ViaPatterns: string[] | null;
   };
