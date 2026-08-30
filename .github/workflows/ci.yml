@@ -7,6 +7,7 @@ on:
       - "api/**"
       - "frontend/**"
       - ".github/workflows/ci.yml"
+      - ".github/workflows/deploy.yml"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
