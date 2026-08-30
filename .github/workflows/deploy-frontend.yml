@@ -1,23 +1,22 @@
-name: Deploy
+name: Deploy Frontend
 
 on:
   push:
     branches: [main]
     paths:
-      - "api/**"
       - "frontend/**"
-      - ".github/workflows/deploy.yml"
+      - ".github/workflows/deploy-frontend.yml"
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: production-deploy
+  group: production-deploy-frontend
   cancel-in-progress: false
 
 jobs:
-  frontend-config:
+  config:
     name: Check frontend deployment configuration
     runs-on: ubuntu-latest
     environment: production
@@ -38,8 +37,8 @@ jobs:
 
   frontend:
     name: Deploy frontend
-    needs: frontend-config
-    if: needs.frontend-config.outputs.enabled == 'true'
+    needs: config
+    if: needs.config.outputs.enabled == 'true'
     runs-on: ubuntu-latest
     environment: production
     defaults:
@@ -63,37 +62,3 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: npx vercel --prod --yes --token="$VERCEL_TOKEN"
-
-  api:
-    name: Deploy API
-    runs-on: ubuntu-latest
-    environment: production
-    permissions:
-      contents: read
-      id-token: write
-    defaults:
-      run:
-        working-directory: api
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v6
-
-      - name: Validate Google Cloud federation configuration
-        env:
-          WIF_PROVIDER: projects/822728042696/locations/global/workloadIdentityPools/github-actions/providers/whichway
-          SERVICE_ACCOUNT: github-actions-deployer@whichway-494614.iam.gserviceaccount.com
-        run: |
-          test -n "$WIF_PROVIDER"
-          test -n "$SERVICE_ACCOUNT"
-
-      - name: Authenticate to Google Cloud
-        uses: google-github-actions/auth@v3
-        with:
-          workload_identity_provider: projects/822728042696/locations/global/workloadIdentityPools/github-actions/providers/whichway
-          service_account: github-actions-deployer@whichway-494614.iam.gserviceaccount.com
-
-      - name: Set up gcloud
-        uses: google-github-actions/setup-gcloud@v3
-
-      - name: Deploy to Google Cloud Functions
-        run: make deploy
