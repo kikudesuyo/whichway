@@ -17,8 +17,29 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  frontend-config:
+    name: Check frontend deployment configuration
+    runs-on: ubuntu-latest
+    environment: production
+    outputs:
+      enabled: ${{ steps.config.outputs.enabled }}
+    steps:
+      - id: config
+        name: Check Vercel token
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          if [ -n "$VERCEL_TOKEN" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "VERCEL_TOKEN is not configured; skipping frontend deployment."
+          fi
+
   frontend:
     name: Deploy frontend
+    needs: frontend-config
+    if: needs.frontend-config.outputs.enabled == 'true'
     runs-on: ubuntu-latest
     environment: production
     defaults:
