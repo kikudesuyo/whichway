@@ -45,7 +45,7 @@ func HandleRoutes(w http.ResponseWriter, r *http.Request) {
 	}
 	if params.From == "" || params.To == "" {
 		w.WriteHeader(http.StatusBadRequest)
-		json.NewEncoder(w).Encode(ErrorResp{Error: "from と to クエリパラメータが必要です"})
+		_ = json.NewEncoder(w).Encode(ErrorResp{Error: "from と to クエリパラメータが必要です"})
 		return
 	}
 
@@ -53,9 +53,9 @@ func HandleRoutes(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println("検索エラー:", err)
 		w.WriteHeader(http.StatusInternalServerError)
-		json.NewEncoder(w).Encode(ErrorResp{Error: "ルートの検索に失敗しました"})
+		_ = json.NewEncoder(w).Encode(ErrorResp{Error: "ルートの検索に失敗しました"})
 		return
 	}
 
-	json.NewEncoder(w).Encode(RouteResp{Routes: uniqueRoutes})
+	_ = json.NewEncoder(w).Encode(RouteResp{Routes: uniqueRoutes})
 }
