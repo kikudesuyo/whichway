@@ -12,6 +12,87 @@ interface TagInputProps {
   onRemove: (index: number) => void;
 }
 
+function StationInput({
+  id,
+  placeholder,
+  value,
+  onChange,
+  onKeyDown,
+}: {
+  id: string;
+  placeholder: string;
+  value: string;
+  onChange: (value: string) => void;
+  onKeyDown?: (event: KeyboardEvent<HTMLInputElement>) => void;
+}) {
+  const [suggestions, setSuggestions] = useState<Array<{ id: string; name: string; feedName?: string }>>([]);
+  const [isFocused, setIsFocused] = useState(false);
+
+  useEffect(() => {
+    const query = value.trim();
+    if (!query) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setSuggestions([]);
+      return;
+    }
+    const controller = new AbortController();
+    const timer = setTimeout(async () => {
+      try {
+        const res = await fetch(`https://api.transit.ls8h.com/api/v1/locations/suggest?q=${encodeURIComponent(query)}&limit=8`, {
+          signal: controller.signal,
+        });
+        if (!res.ok) return;
+        const data = await res.json() as { stations?: Array<{ id: string; name: string; feedName?: string }> };
+        setSuggestions(data.stations ?? []);
+      } catch {
+        // 候補 API が利用できない場合も自由入力は利用できる
+      }
+    }, 250);
+    return () => {
+      clearTimeout(timer);
+      controller.abort();
+    };
+  }, [value]);
+
+  return (
+    <div className="relative flex-1 min-w-0">
+      <input
+        id={id}
+        type="text"
+        placeholder={placeholder}
+        value={value}
+        autoComplete="off"
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => setTimeout(() => setIsFocused(false), 150)}
+        onChange={(e) => onChange(e.target.value)}
+        onKeyDown={onKeyDown}
+        className="w-full bg-transparent text-slate-800 font-semibold text-sm placeholder:text-slate-400 outline-none"
+      />
+      {isFocused && suggestions.length > 0 && (
+        <ul role="listbox" className="absolute z-30 left-0 right-0 top-full mt-2 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xl">
+          {suggestions.map((station) => (
+            <li key={station.id}>
+              <button
+                type="button"
+                className="w-full px-3 py-2 text-left hover:bg-blue-50"
+                onMouseDown={(e) => e.preventDefault()}
+                onClick={() => {
+                  onChange(station.name);
+                  setSuggestions([]);
+                  setIsFocused(false);
+                }}
+              >
+                <span className="block text-sm font-bold text-slate-800">{station.name}</span>
+                {station.feedName && <span className="block text-xs text-slate-400">{station.feedName}</span>}
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
 function TagInput({ id, placeholder, tags, onAdd, onRemove }: TagInputProps) {
   const [input, setInput] = useState('');
   const [dupWarning, setDupWarning] = useState<string | null>(null);
@@ -116,8 +197,13 @@ export default function SearchForm() {
   useEffect(() => {
     const saved = loadFormValues();
     if (!saved) return;
-    if (!searchParams.get('from') && saved.from) setFrom(saved.from);
-    if (!searchParams.get('to') && saved.to) setTo(saved.to);
+    if (!searchParams.get('from') && saved.from) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setFrom(saved.from);
+    }
+    if (!searchParams.get('to') && saved.to) {
+      setTo(saved.to);
+    }
     if (!searchParams.getAll('preferred_lines').length && saved.preferredLines.length) {
       setPreferredLines(saved.preferredLines);
       setShowAdvanced(true);
@@ -159,15 +245,7 @@ export default function SearchForm() {
             <circle cx="12" cy="12" r="4" strokeWidth={2.5} />
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 2v2m0 16v2M2 12h2m16 0h2" />
           </svg>
-          <input
-            id="from-station"
-            type="text"
-            placeholder="出発地"
-            value={from}
-            onChange={(e) => setFrom(e.target.value)}
-            onKeyDown={handleStationKeyDown}
-            className="flex-1 bg-transparent text-slate-800 font-semibold text-sm placeholder:text-slate-400 outline-none"
-          />
+          <StationInput id="from-station" placeholder="出発地" value={from} onChange={setFrom} onKeyDown={handleStationKeyDown} />
         </div>
 
         {/* 入れ替えボタン */}
@@ -209,15 +287,7 @@ export default function SearchForm() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
-          <input
-            id="to-station"
-            type="text"
-            placeholder="目的地"
-            value={to}
-            onChange={(e) => setTo(e.target.value)}
-            onKeyDown={handleStationKeyDown}
-            className="flex-1 bg-transparent text-slate-800 font-semibold text-sm placeholder:text-slate-400 outline-none"
-          />
+          <StationInput id="to-station" placeholder="目的地" value={to} onChange={setTo} onKeyDown={handleStationKeyDown} />
         </div>
 
         {/* 検索ボタン */}

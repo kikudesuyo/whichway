@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { UniqueRoute } from './types';
+import { RouteEdge, UniqueRoute } from './types';
 
 const InfoChip = ({ children, icon, color = "slate" }: { children: React.ReactNode, icon?: React.ReactNode, color?: string }) => {
   const colors: Record<string, string> = {
@@ -24,15 +24,25 @@ export default function RouteCard({ r, i }: { r: UniqueRoute, i: number }) {
 
   const edges = r.ScoredRoute.Route.edgeInfoList;
   
-  const isThroughService = (edge: any, idx: number) => {
+  const isThroughService = (edge: RouteEdge, idx: number) => {
     if (idx === 0 || idx === edges.length - 1) return false;
-    const arrTime = edge.timeInfo.find((t: any) => t.type === 2 || t.type === 4)?.time;
-    const depTime = edge.timeInfo.find((t: any) => t.type === 1 || t.type === 3)?.time;
+    const arrTime = edge.timeInfo.find((t) => t.type === 2 || t.type === 4)?.time;
+    const depTime = edge.timeInfo.find((t) => t.type === 1 || t.type === 3)?.time;
     return arrTime === depTime && arrTime !== undefined;
   };
 
   const significantEdges = edges.filter((edge, idx) => !isThroughService(edge, idx));
   const isDirect = r.ScoredRoute.Route.summaryInfo.transferCount === "0";
+
+  const getPlatform = (edge: RouteEdge, kind: 'departure' | 'arrival') =>
+    edge.ridingPositionInfo?.[kind]?.join('') || null;
+
+  const getDelayLabel = (edge: RouteEdge) => {
+    const status = edge.diaInfoStatus?.[0];
+    if (!status) return null;
+    const text = Object.values(status).find((value: unknown) => typeof value === 'string');
+    return text ? String(text) : '運行情報あり';
+  };
 
   return (
     <div className="group relative bg-white border border-slate-200/60 rounded-[1.8rem] sm:rounded-[2.5rem] shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_15px_40px_rgb(0,0,0,0.08)] transition-all duration-500 ease-out overflow-hidden mb-4 mx-1">
@@ -126,7 +136,7 @@ export default function RouteCard({ r, i }: { r: UniqueRoute, i: number }) {
                         </p>
                         {edge.timeInfo && edge.timeInfo.length > 0 && (
                           <div className="flex gap-1.5 sm:gap-2 items-center overflow-x-auto no-scrollbar">
-                            {edge.timeInfo.map((ti: any, tIdx: number) => {
+                            {edge.timeInfo.map((ti, tIdx: number) => {
                               const label = ti.type === 1 || (ti.type === 3 && eIdx === 0) ? "発" : "着";
                               const colorClasses = label === "発" 
                                 ? "bg-emerald-50 text-emerald-700 border-emerald-100" 
@@ -142,6 +152,33 @@ export default function RouteCard({ r, i }: { r: UniqueRoute, i: number }) {
                         )}
                       </div>
                       
+                      {(getPlatform(edge, 'departure') || getPlatform(edge, 'arrival') || getDelayLabel(edge)) && (
+                        <div className="flex flex-wrap gap-2 mt-2">
+                          {getPlatform(edge, 'departure') && (
+                            <span className="px-2 py-1 rounded-lg bg-indigo-50 text-indigo-700 border border-indigo-100 text-[10px] font-black">
+                              {eIdx === 0 ? '出発' : '乗換'} {getPlatform(edge, 'departure')}
+                            </span>
+                          )}
+                          {eIdx > 0 && getPlatform(edge, 'arrival') && (
+                            <span className="px-2 py-1 rounded-lg bg-slate-50 text-slate-600 border border-slate-200 text-[10px] font-black">
+                              到着 {getPlatform(edge, 'arrival')}
+                            </span>
+                          )}
+                          {getDelayLabel(edge) && (
+                            <span className="px-2 py-1 rounded-lg bg-rose-50 text-rose-700 border border-rose-100 text-[10px] font-black">
+                              遅延: {getDelayLabel(edge)}
+                            </span>
+                          )}
+                        </div>
+                      )}
+
+                      {(edge.stopStationList ?? []).length > 0 && (
+                        <details className="mt-2 text-xs text-slate-500">
+                          <summary className="cursor-pointer font-bold">途中駅 {(edge.stopStationList ?? []).length}駅</summary>
+                          <p className="mt-1 leading-6">{(edge.stopStationList ?? []).map((stop) => `${stop.name} ${stop.departureTime}`).join(' · ')}</p>
+                        </details>
+                      )}
+
                       {eIdx < edges.length - 1 && (
                         <div className="mt-3 mb-4 sm:mt-4 sm:mb-6 relative">
                           <div className="px-3 py-1.5 sm:px-4 sm:py-2.5 rounded-xl sm:rounded-2xl bg-white border border-slate-100 shadow-sm inline-flex items-center gap-2 sm:gap-3 max-w-full overflow-hidden transition-all duration-300">
