@@ -29,7 +29,7 @@ __deploy:
 	  --gen2 \
 	  --project ${project} \
 	  --region asia-northeast1 \
-	  --runtime go125 \
+	  --runtime go127 \
 	  --source ./ \
 	  --entry-point RunHTTPServer \
 	  --trigger-http \
